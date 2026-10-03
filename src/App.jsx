@@ -20,7 +20,8 @@ import NavBar2 from "./NavBar2/NavBar2";
 // Footer only appears after successful login.
 // =====================================================
 
-import Footer from "./FooterPage/Footer";
+import Footer from "./Footerpage/Footer";
+
 
 // =====================================================
 // LOGIN / SIGNUP / FORGOT / OTP / RESET PASSWORD
@@ -29,16 +30,16 @@ import Footer from "./FooterPage/Footer";
 import Login from "./Login/Login";
 import Signup from "./Login/Sign";
 import ForgotPassword from "./Login/Forget";
-import OTP from "./Login/OTP";
+import OTP from "./Login/Otp";
 import ResetPassword from "./Login/Password";
 
 // =====================================================
 // MAIN PAGES
 // =====================================================
 
-import Stocks from "./NavBar/Pages/Stocks";
-import FO from "./NavBar/Pages/FO";
-import Mutualfunds from "./NavBar/Pages/Mutualfunds";
+import Stocks from "./NavBar/pages/Stocks";
+import FO from "./NavBar/pages/FO";
+import Mutualfunds from "./NavBar/pages/Mutualfunds";
 
 // =====================================================
 // INDEX PAGES
@@ -65,8 +66,8 @@ import WatchList from "./NavBar3/NavBar3inner/WatchList";
 // DETAILS
 // =====================================================
 
-import StockDetails from "./NavBar/Pages/Stockdetails";
-import MutualFundDetails from "./NavBar/Pages/Mutualsdetails";
+import StockDetails from "./NavBar/pages/Stockdetails";
+import MutualFundDetails from "./NavBar/pages/Mutualsdetails";
 
 // =====================================================
 // ACCOUNT / REPORTS / SUPPORT
