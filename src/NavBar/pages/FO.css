@@ -1,0 +1,1435 @@
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+  background: #07111f;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #07111f;
+  color: #ffffff;
+}
+
+button,
+input {
+  font-family: inherit;
+}
+
+button {
+  outline: none;
+}
+
+
+/* =========================================================
+   MAIN CONTAINER
+========================================================= */
+
+.fo-container {
+  min-height: 100vh;
+
+  background:
+    radial-gradient(
+      circle at 90% 0%,
+      rgba(37, 99, 235, 0.14),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 0% 30%,
+      rgba(14, 165, 233, 0.06),
+      transparent 25%
+    ),
+    #07111f;
+
+  padding: 30px 40px 60px;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.fo-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  max-width: 1400px;
+  margin: 0 auto 25px;
+}
+
+.fo-header h1 {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.fo-header p {
+  margin-top: 7px;
+  color: #8fa1b5;
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   MARKET STATUS
+========================================================= */
+
+.fo-market-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 9px 15px;
+
+  border: 1px solid rgba(34, 197, 94, 0.35);
+  border-radius: 20px;
+
+  background: rgba(34, 197, 94, 0.07);
+
+  color: #22c55e;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  box-shadow:
+    0 0 20px rgba(34, 197, 94, 0.04);
+}
+
+.fo-market-status span {
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+
+  background: #22c55e;
+
+  box-shadow: 0 0 8px #22c55e;
+
+  animation: marketPulse 1.5s infinite;
+}
+
+@keyframes marketPulse {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.4;
+    transform: scale(0.8);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+/* =========================================================
+   INDEX SELECTOR
+========================================================= */
+
+.fo-index-selector {
+  max-width: 1400px;
+  margin: 0 auto 20px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 15px;
+}
+
+.fo-index-selector button {
+  position: relative;
+
+  text-align: left;
+
+  padding: 19px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #0d1b2d,
+      #0a1727
+    );
+
+  color: #ffffff;
+
+  border: 1px solid #1e3550;
+  border-radius: 14px;
+
+  cursor: pointer;
+
+  transition:
+    border-color 0.25s,
+    background 0.25s,
+    transform 0.25s,
+    box-shadow 0.25s;
+}
+
+.fo-index-selector button:hover {
+  background:
+    linear-gradient(
+      145deg,
+      #10223a,
+      #0c1a2d
+    );
+
+  border-color: #31577e;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.18);
+}
+
+.fo-index-selector button.selected {
+  border-color: #2563eb;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(37, 99, 235, 0.18),
+      #0c1a2c
+    );
+
+  box-shadow:
+    0 0 0 1px rgba(37, 99, 235, 0.08),
+    0 10px 30px rgba(37, 99, 235, 0.08);
+}
+
+.fo-index-selector span {
+  display: block;
+
+  color: #8fa1b5;
+
+  font-size: 13px;
+
+  margin-bottom: 8px;
+}
+
+.fo-index-selector strong {
+  display: block;
+
+  font-size: 21px;
+
+  margin-bottom: 7px;
+}
+
+.fo-index-selector small {
+  font-size: 12px;
+}
+
+
+/* =========================================================
+   COLORS
+========================================================= */
+
+.green {
+  color: #22c55e !important;
+}
+
+.red {
+  color: #ef4444 !important;
+}
+
+
+/* =========================================================
+   PRICE CARD
+========================================================= */
+
+.fo-price-card {
+  max-width: 1400px;
+  margin: 0 auto 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 24px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #0d1b2d,
+      #0a1727
+    );
+
+  border: 1px solid #1e3550;
+
+  border-radius: 14px;
+
+  box-shadow:
+    0 12px 35px rgba(0, 0, 0, 0.16);
+}
+
+.fo-price-card > div:first-child > span {
+  color: #8fa1b5;
+  font-size: 14px;
+}
+
+.fo-price-card h2 {
+  margin-top: 7px;
+
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.fo-price-card p {
+  margin-top: 6px;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   LIVE BADGE
+========================================================= */
+
+.fo-live {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 8px 13px;
+
+  border-radius: 20px;
+
+  background: rgba(34, 197, 94, 0.07);
+
+  border: 1px solid rgba(34, 197, 94, 0.3);
+
+  color: #22c55e;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.fo-live span {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #22c55e;
+
+  box-shadow: 0 0 7px #22c55e;
+}
+
+
+/* =========================================================
+   COMMON CARD
+========================================================= */
+
+.fo-chart-card,
+.fo-options-card,
+.fo-futures-card {
+  max-width: 1400px;
+
+  margin: 0 auto 20px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #0d1b2d,
+      #0a1727
+    );
+
+  border: 1px solid #1e3550;
+
+  border-radius: 14px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 12px 35px rgba(0, 0, 0, 0.14);
+}
+
+
+/* =========================================================
+   CARD HEADER
+========================================================= */
+
+.fo-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 20px 22px;
+
+  border-bottom: 1px solid #1c334d;
+
+  background: rgba(13, 27, 45, 0.75);
+}
+
+.fo-card-header h2 {
+  font-size: 19px;
+}
+
+.fo-card-header p {
+  margin-top: 5px;
+
+  color: #71869d;
+
+  font-size: 12px;
+}
+
+.chart-live {
+  color: #22c55e;
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   CHART
+========================================================= */
+
+.fo-chart {
+  width: 100%;
+  height: 420px;
+
+  padding: 15px 15px 20px;
+
+  background: #091727;
+}
+
+.fo-chart .recharts-cartesian-grid-horizontal line,
+.fo-chart .recharts-cartesian-grid-vertical line {
+  stroke: #1d344d;
+}
+
+.fo-chart .recharts-text {
+  fill: #71869d;
+}
+
+.fo-chart .recharts-tooltip-wrapper {
+  outline: none;
+}
+
+.fo-chart .recharts-default-tooltip {
+  background: #0d1b2d !important;
+
+  border: 1px solid #31506f !important;
+
+  border-radius: 9px;
+
+  box-shadow:
+    0 12px 35px rgba(0, 0, 0, 0.35);
+}
+
+
+/* =========================================================
+   EXPIRY
+========================================================= */
+
+.expiry {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  color: #71869d;
+
+  font-size: 12px;
+}
+
+.expiry strong {
+  padding: 6px 10px;
+
+  border-radius: 6px;
+
+  background: #14263b;
+
+  color: #ffffff;
+
+  font-size: 11px;
+
+  border: 1px solid #233e5b;
+}
+
+
+/* =========================================================
+   OPTION TABLE HEADER
+========================================================= */
+
+.option-table-header {
+  display: grid;
+
+  grid-template-columns: 1fr 120px 1fr;
+
+  padding: 13px 20px;
+
+  background: #0b192a;
+
+  border-bottom: 1px solid #1c334d;
+
+  text-align: center;
+
+  color: #71869d;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.7px;
+}
+
+.option-table-header span:first-child {
+  color: #22c55e;
+}
+
+.option-table-header span:last-child {
+  color: #ef4444;
+}
+
+
+/* =========================================================
+   OPTION ROW
+========================================================= */
+
+.option-row {
+  display: grid;
+
+  grid-template-columns: 1fr 120px 1fr;
+
+  min-height: 100px;
+
+  background: #0a1829;
+
+  border-bottom: 1px solid #172d44;
+
+  transition:
+    background 0.2s;
+}
+
+.option-row:last-child {
+  border-bottom: none;
+}
+
+.option-row:hover {
+  background: #0e2034;
+}
+
+
+/* =========================================================
+   OPTION SIDE
+========================================================= */
+
+.option-side {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+
+  padding: 17px 20px;
+
+  background: transparent;
+}
+
+.option-side > div {
+  min-width: 90px;
+}
+
+.option-side strong {
+  display: block;
+
+  font-size: 17px;
+}
+
+.option-side small {
+  display: block;
+
+  margin-top: 5px;
+
+  font-size: 11px;
+
+  font-weight: 600;
+}
+
+.option-side > span {
+  color: #71869d;
+
+  font-size: 11px;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   STRIKE
+========================================================= */
+
+.strike-price {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  background: #071523;
+
+  border-left: 1px solid #1c334d;
+  border-right: 1px solid #1c334d;
+}
+
+.strike-price strong {
+  font-size: 16px;
+}
+
+.strike-price small {
+  margin-top: 5px;
+
+  color: #60758c;
+
+  font-size: 10px;
+}
+
+
+/* =========================================================
+   CALL BUY BUTTON
+========================================================= */
+
+.call-buy-btn {
+  min-width: 100px;
+
+  padding: 9px 12px;
+
+  border: 1px solid rgba(34, 197, 94, 0.4);
+
+  border-radius: 7px;
+
+  background: rgba(34, 197, 94, 0.07);
+
+  color: #22c55e;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s,
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+
+.call-buy-btn:hover {
+  background: rgba(34, 197, 94, 0.16);
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 5px 15px rgba(34, 197, 94, 0.08);
+}
+
+
+/* =========================================================
+   PUT BUY BUTTON
+========================================================= */
+
+.put-buy-btn {
+  min-width: 100px;
+
+  padding: 9px 12px;
+
+  border: 1px solid rgba(239, 68, 68, 0.4);
+
+  border-radius: 7px;
+
+  background: rgba(239, 68, 68, 0.07);
+
+  color: #ef4444;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s,
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+
+.put-buy-btn:hover {
+  background: rgba(239, 68, 68, 0.16);
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 5px 15px rgba(239, 68, 68, 0.08);
+}
+
+
+/* =========================================================
+   PUT SIDE
+========================================================= */
+
+.put-side > div:last-child {
+  text-align: right;
+}
+
+
+/* =========================================================
+   FUTURES
+========================================================= */
+
+.future-row {
+  display: grid;
+
+  grid-template-columns:
+    1.5fr
+    1fr
+    1fr
+    150px;
+
+  align-items: center;
+
+  gap: 20px;
+
+  padding: 22px;
+
+  background: #0a1829;
+}
+
+.future-row > div {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 6px;
+}
+
+.future-row > div > strong {
+  font-size: 16px;
+}
+
+.future-row span {
+  color: #71869d;
+
+  font-size: 11px;
+}
+
+
+/* =========================================================
+   FUTURES BUY BUTTON
+========================================================= */
+
+.future-buy-btn {
+  padding: 11px 15px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #2563eb,
+      #1d4ed8
+    );
+
+  color: white;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s,
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+
+.future-buy-btn:hover {
+  background:
+    linear-gradient(
+      135deg,
+      #3b82f6,
+      #2563eb
+    );
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 8px 20px rgba(37, 99, 235, 0.2);
+}
+
+
+/* =========================================================
+   QUANTITY MODAL OVERLAY
+========================================================= */
+
+.quantity-modal-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 9999;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  background: rgba(3, 10, 18, 0.82);
+
+  backdrop-filter: blur(8px);
+
+  animation: modalOverlayIn 0.2s ease;
+}
+
+@keyframes modalOverlayIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+/* =========================================================
+   QUANTITY MODAL
+========================================================= */
+
+.quantity-modal {
+  width: 100%;
+
+  max-width: 470px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #0d1b2d,
+      #091727
+    );
+
+  border: 1px solid #29445f;
+
+  border-radius: 16px;
+
+  box-shadow:
+    0 25px 80px rgba(0, 0, 0, 0.65),
+    0 0 40px rgba(37, 99, 235, 0.06);
+
+  overflow: hidden;
+
+  animation: modalIn 0.25s ease;
+}
+
+@keyframes modalIn {
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(15px)
+      scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0)
+      scale(1);
+  }
+}
+
+
+/* =========================================================
+   MODAL HEADER
+========================================================= */
+
+.quantity-modal-header {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: 20px 22px;
+
+  border-bottom: 1px solid #1d344d;
+
+  background: #0d1b2d;
+}
+
+.quantity-modal-header h2 {
+  font-size: 19px;
+}
+
+.quantity-modal-header p {
+  margin-top: 5px;
+
+  color: #71869d;
+
+  font-size: 12px;
+}
+
+.quantity-close {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #29445f;
+
+  border-radius: 8px;
+
+  background: #102238;
+
+  color: #9aabba;
+
+  font-size: 24px;
+
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+
+.quantity-close:hover {
+  background: #17304b;
+
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   ORDER DETAILS
+========================================================= */
+
+.quantity-order-details {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 10px;
+
+  padding: 20px 22px;
+
+  background: #091727;
+}
+
+.quantity-order-details > div {
+  padding: 13px;
+
+  background: #0e2034;
+
+  border: 1px solid #1f3a55;
+
+  border-radius: 9px;
+}
+
+.quantity-order-details span {
+  display: block;
+
+  color: #71869d;
+
+  font-size: 10px;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.5px;
+}
+
+.quantity-order-details strong {
+  display: block;
+
+  margin-top: 6px;
+
+  color: #ffffff;
+
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   QUANTITY SECTION
+========================================================= */
+
+.quantity-input-section {
+  padding: 0 22px 20px;
+
+  background: #091727;
+}
+
+.quantity-input-section label {
+  display: block;
+
+  margin-bottom: 9px;
+
+  color: #9aabba;
+
+  font-size: 12px;
+
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   QUANTITY CONTROL
+========================================================= */
+
+.quantity-control {
+  display: flex;
+
+  align-items: center;
+
+  width: 100%;
+
+  height: 48px;
+
+  border: 1px solid #29445f;
+
+  border-radius: 9px;
+
+  overflow: hidden;
+
+  background: #071523;
+}
+
+.quantity-control button {
+  width: 55px;
+  height: 100%;
+
+  border: none;
+
+  background: #102238;
+
+  color: #ffffff;
+
+  font-size: 22px;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s;
+}
+
+.quantity-control button:hover {
+  background: #17304b;
+}
+
+.quantity-control input {
+  flex: 1;
+
+  width: 100%;
+  height: 100%;
+
+  border: none;
+  outline: none;
+
+  background: #071523;
+
+  color: #ffffff;
+
+  text-align: center;
+
+  font-size: 17px;
+
+  font-weight: 600;
+}
+
+
+/* Remove number arrows */
+
+.quantity-control input::-webkit-inner-spin-button,
+.quantity-control input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+
+  margin: 0;
+}
+
+.quantity-control input[type="number"] {
+  appearance: textfield;
+
+  -moz-appearance: textfield;
+}
+
+
+/* =========================================================
+   TOTAL
+========================================================= */
+
+.quantity-total {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin: 0 22px 20px;
+
+  padding: 16px;
+
+  border: 1px solid #1f3a55;
+
+  border-radius: 9px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #102238,
+      #0c1d30
+    );
+}
+
+.quantity-total span {
+  color: #8fa1b5;
+
+  font-size: 12px;
+}
+
+.quantity-total strong {
+  color: #ffffff;
+
+  font-size: 19px;
+}
+
+
+/* =========================================================
+   MODAL ACTIONS
+========================================================= */
+
+.quantity-modal-actions {
+  display: grid;
+
+  grid-template-columns: 1fr 1.4fr;
+
+  gap: 10px;
+
+  padding: 18px 22px 22px;
+
+  border-top: 1px solid #1d344d;
+
+  background: #0b192a;
+}
+
+.quantity-cancel-button,
+.quantity-confirm-button {
+  height: 45px;
+
+  border-radius: 8px;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s,
+    transform 0.2s;
+}
+
+.quantity-cancel-button {
+  border: 1px solid #29445f;
+
+  background: #102238;
+
+  color: #9aabba;
+}
+
+.quantity-cancel-button:hover {
+  background: #17304b;
+
+  color: #ffffff;
+}
+
+.quantity-confirm-button {
+  border: none;
+
+  background:
+    linear-gradient(
+      135deg,
+      #16a34a,
+      #15803d
+    );
+
+  color: #ffffff;
+}
+
+.quantity-confirm-button:hover {
+  background:
+    linear-gradient(
+      135deg,
+      #22c55e,
+      #16a34a
+    );
+
+  transform: translateY(-1px);
+}
+
+.quantity-confirm-button:disabled {
+  opacity: 0.35;
+
+  cursor: not-allowed;
+
+  transform: none;
+}
+
+
+/* =========================================================
+   RESPONSIVE - TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .fo-container {
+    padding: 20px;
+  }
+
+  .fo-index-selector {
+    grid-template-columns: 1fr;
+  }
+
+  .option-table-header,
+  .option-row {
+    grid-template-columns:
+      1fr
+      100px
+      1fr;
+  }
+
+  .option-side {
+    gap: 8px;
+
+    padding: 14px 10px;
+  }
+
+  .option-side > span {
+    display: none;
+  }
+
+  .call-buy-btn,
+  .put-buy-btn {
+    min-width: 80px;
+
+    padding: 8px 7px;
+
+    font-size: 9px;
+  }
+
+  .future-row {
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+  }
+
+  .future-buy-btn {
+    width: 100%;
+  }
+}
+
+
+/* =========================================================
+   RESPONSIVE - MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .fo-container {
+    padding: 15px 10px 40px;
+  }
+
+  .fo-header {
+    align-items: flex-start;
+
+    gap: 15px;
+  }
+
+  .fo-header h1 {
+    font-size: 22px;
+  }
+
+  .fo-header p {
+    font-size: 11px;
+  }
+
+  .fo-market-status {
+    padding: 7px 9px;
+
+    font-size: 10px;
+  }
+
+
+  /* Price */
+
+  .fo-price-card {
+    padding: 17px;
+  }
+
+  .fo-price-card h2 {
+    font-size: 25px;
+  }
+
+
+  /* Chart */
+
+  .fo-chart {
+    height: 300px;
+
+    padding: 5px;
+  }
+
+
+  /* Option chain */
+
+  .option-table-header {
+    grid-template-columns:
+      1fr
+      75px
+      1fr;
+
+    padding: 11px 5px;
+
+    font-size: 9px;
+  }
+
+  .option-row {
+    grid-template-columns:
+      1fr
+      75px
+      1fr;
+
+    min-height: 125px;
+  }
+
+  .option-side {
+    flex-direction: column;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 10px 5px;
+
+    gap: 7px;
+  }
+
+  .option-side > div {
+    min-width: auto;
+  }
+
+  .option-side strong {
+    font-size: 14px;
+  }
+
+  .option-side small {
+    font-size: 9px;
+  }
+
+  .call-buy-btn,
+  .put-buy-btn {
+    width: 100%;
+
+    min-width: 0;
+
+    padding: 8px 3px;
+
+    font-size: 8px;
+  }
+
+  .strike-price strong {
+    font-size: 13px;
+  }
+
+  .strike-price small {
+    font-size: 8px;
+  }
+
+
+  /* Futures */
+
+  .future-row {
+    grid-template-columns: 1fr 1fr;
+
+    padding: 17px;
+  }
+
+  .future-row > div > strong {
+    font-size: 13px;
+  }
+
+  .future-row span {
+    font-size: 9px;
+  }
+
+  .future-buy-btn {
+    grid-column: 1 / -1;
+
+    margin-top: 5px;
+  }
+
+
+  /* Modal */
+
+  .quantity-modal {
+    max-width: 100%;
+  }
+
+  .quantity-modal-header {
+    padding: 17px;
+  }
+
+  .quantity-order-details {
+    padding: 15px 17px;
+
+    gap: 7px;
+  }
+
+  .quantity-order-details > div {
+    padding: 10px;
+  }
+
+  .quantity-order-details strong {
+    font-size: 12px;
+  }
+
+  .quantity-input-section {
+    padding: 0 17px 17px;
+  }
+
+  .quantity-total {
+    margin: 0 17px 17px;
+  }
+
+  .quantity-modal-actions {
+    padding: 15px 17px 17px;
+  }
+}
+

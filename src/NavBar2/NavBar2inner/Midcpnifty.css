@@ -1,0 +1,946 @@
+
+/* =========================================
+   GLOBAL
+========================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #07111f;
+  color: #ffffff;
+}
+
+button {
+  font-family: inherit;
+}
+
+
+/* =========================================
+   MIDCP NIFTY MAIN CONTAINER
+========================================= */
+
+.midcpnifty-container {
+  width: 100%;
+  min-height: 100vh;
+
+  padding: 35px 15px 70px;
+
+  background: #07111f;
+  color: #ffffff;
+}
+
+
+/* =========================================
+   MAIN CARD
+========================================= */
+
+.midcpnifty-card {
+  width: 100%;
+  max-width: 1250px;
+
+  margin: 0 auto 25px;
+
+  padding: 30px;
+
+  background: #0d1b2a;
+
+  border-radius: 18px;
+
+  border: 1px solid #1e3a5f;
+
+  box-shadow:
+    0 8px 30px rgba(0, 0, 0, 0.35);
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.midcpnifty-header {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+}
+
+.midcpnifty-header h1 {
+  margin: 0;
+
+  font-size: 32px;
+
+  font-weight: 700;
+
+  color: #ffffff;
+}
+
+.midcpnifty-header p {
+  margin: 7px 0 0;
+
+  color: #8fa3b8;
+
+  font-size: 15px;
+}
+
+
+/* =========================================
+   LIVE BADGE
+========================================= */
+
+.live-badge {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  background: #063b2a;
+
+  color: #22c55e;
+
+  padding: 8px 15px;
+
+  border-radius: 20px;
+
+  font-size: 13px;
+
+  font-weight: bold;
+
+  border: 1px solid #166534;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================
+   MIDCP NIFTY PRICE
+========================================= */
+
+.midcpnifty-card > h2 {
+  font-size: 44px;
+
+  margin: 25px 0 5px;
+
+  color: #ffffff;
+
+  font-weight: 700;
+
+  letter-spacing: -1px;
+}
+
+.midcpnifty-card > p {
+  font-size: 18px;
+
+  font-weight: 600;
+
+  margin-top: 8px;
+}
+
+
+/* =========================================
+   GREEN / RED
+========================================= */
+
+.green {
+  color: #22c55e;
+
+  font-weight: 700;
+}
+
+.red {
+  color: #ef4444;
+
+  font-weight: 700;
+}
+
+
+/* =========================================
+   DETAILS
+========================================= */
+
+.midcpnifty-details {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 15px;
+
+  margin-top: 30px;
+}
+
+
+/* =========================================
+   DETAIL BOX
+========================================= */
+
+.detail-box {
+  background: #102235;
+
+  border: 1px solid #1e3a5f;
+
+  padding: 18px;
+
+  border-radius: 12px;
+
+  transition: all 0.25s ease;
+}
+
+.detail-box:hover {
+  background: #142b45;
+
+  border-color: #3b82f6;
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 6px 18px rgba(37, 99, 235, 0.15);
+}
+
+.detail-box h3 {
+  margin: 0 0 8px;
+
+  font-size: 14px;
+
+  color: #8fa3b8;
+
+  font-weight: 600;
+}
+
+.detail-box p {
+  margin: 0;
+
+  font-size: 17px;
+
+  font-weight: 600;
+
+  color: #ffffff;
+}
+
+
+/* =========================================
+   GRAPH CARD
+========================================= */
+
+.midcpnifty-chart-card {
+  width: 100%;
+  max-width: 1250px;
+
+  margin: 0 auto 25px;
+
+  background: #0d1b2a;
+
+  border-radius: 18px;
+
+  padding: 25px;
+
+  border: 1px solid #1e3a5f;
+
+  box-shadow:
+    0 8px 30px rgba(0, 0, 0, 0.35);
+}
+
+
+/* =========================================
+   GRAPH HEADER
+========================================= */
+
+.chart-header {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+}
+
+.chart-header h2 {
+  margin: 0;
+
+  font-size: 23px;
+
+  color: #ffffff;
+
+  font-weight: 700;
+}
+
+.chart-header p {
+  margin: 6px 0 0;
+
+  color: #8fa3b8;
+
+  font-size: 14px;
+}
+
+
+/* =========================================
+   GRAPH LIVE BADGE
+========================================= */
+
+.chart-live {
+  display: inline-flex;
+
+  align-items: center;
+
+  background: #063b2a;
+
+  color: #22c55e;
+
+  padding: 7px 13px;
+
+  border-radius: 20px;
+
+  font-size: 13px;
+
+  font-weight: bold;
+
+  border: 1px solid #166534;
+}
+
+
+/* =========================================
+   GRAPH
+========================================= */
+
+.midcpnifty-chart {
+  width: 100%;
+
+  height: 450px;
+
+  margin-top: 20px;
+}
+
+
+/* =========================================
+   RECHARTS AXIS
+========================================= */
+
+.midcpnifty-chart .recharts-cartesian-axis-tick-value {
+  fill: #8fa3b8;
+}
+
+.midcpnifty-chart .recharts-cartesian-axis-line {
+  stroke: #1e3a5f;
+}
+
+.midcpnifty-chart .recharts-cartesian-grid-horizontal line,
+.midcpnifty-chart .recharts-cartesian-grid-vertical line {
+  stroke: #1e3a5f;
+}
+
+.midcpnifty-chart .recharts-tooltip-wrapper {
+  outline: none;
+}
+
+
+/* =========================================
+   PERIOD BUTTONS
+========================================= */
+
+.period-buttons {
+  display: flex;
+
+  gap: 10px;
+
+  margin-top: 20px;
+
+  flex-wrap: wrap;
+}
+
+.period-buttons button {
+  border: 1px solid #2563eb;
+
+  background: #0f2238;
+
+  color: #60a5fa;
+
+  padding: 9px 19px;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  transition: all 0.25s ease;
+}
+
+
+/* =========================================
+   BUTTON HOVER
+========================================= */
+
+.period-buttons button:hover {
+  background: #2563eb;
+
+  color: #ffffff;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 5px 15px rgba(37, 99, 235, 0.3);
+}
+
+
+/* =========================================
+   ACTIVE BUTTON
+========================================= */
+
+.period-buttons button.active {
+  background: #2563eb;
+
+  color: #ffffff;
+
+  border-color: #3b82f6;
+
+  box-shadow:
+    0 5px 15px rgba(37, 99, 235, 0.4);
+}
+
+
+/* =========================================
+   STOCKS CARD
+========================================= */
+
+.midcpnifty-stocks-card {
+  width: 100%;
+  max-width: 1250px;
+
+  margin: 0 auto;
+
+  background: #0d1b2a;
+
+  border-radius: 18px;
+
+  padding: 25px;
+
+  border: 1px solid #1e3a5f;
+
+  box-shadow:
+    0 8px 30px rgba(0, 0, 0, 0.35);
+}
+
+
+/* =========================================
+   STOCK HEADER
+========================================= */
+
+.stocks-header {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 20px;
+}
+
+.stocks-header h2 {
+  margin: 0;
+
+  font-size: 24px;
+
+  color: #ffffff;
+}
+
+.stocks-header p {
+  margin: 6px 0 0;
+
+  color: #8fa3b8;
+
+  font-size: 14px;
+}
+
+.stocks-header > span {
+  background: #102d52;
+
+  color: #60a5fa;
+
+  padding: 8px 14px;
+
+  border-radius: 20px;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  border: 1px solid #1d4ed8;
+}
+
+
+/* =========================================
+   STOCK LIST
+========================================= */
+
+.midcpnifty-stock-list {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 10px;
+}
+
+
+/* =========================================
+   STOCK ITEM
+========================================= */
+
+.midcpnifty-stock-item {
+  display: grid;
+
+  grid-template-columns:
+    50px
+    1fr
+    150px
+    100px
+    80px;
+
+  align-items: center;
+
+  gap: 15px;
+
+  padding: 15px;
+
+  border: 1px solid #1e3a5f;
+
+  border-radius: 12px;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+
+  background: #102235;
+}
+
+
+/* =========================================
+   STOCK ITEM HOVER
+========================================= */
+
+.midcpnifty-stock-item:hover {
+  background: #142b45;
+
+  border-color: #3b82f6;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 6px 18px rgba(37, 99, 235, 0.15);
+}
+
+
+/* =========================================
+   STOCK LOGO
+========================================= */
+
+.stock-logo {
+  width: 42px;
+
+  height: 42px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #2563eb;
+
+  color: #ffffff;
+
+  font-weight: bold;
+
+  font-size: 17px;
+
+  box-shadow:
+    0 4px 10px rgba(37, 99, 235, 0.3);
+}
+
+
+/* =========================================
+   STOCK NAME
+========================================= */
+
+.stock-name h3 {
+  margin: 0;
+
+  font-size: 16px;
+
+  color: #ffffff;
+}
+
+.stock-name p {
+  margin: 5px 0 0;
+
+  font-size: 13px;
+
+  color: #8fa3b8;
+}
+
+
+/* =========================================
+   STOCK PRICE
+========================================= */
+
+.stock-price {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+.stock-price span {
+  font-size: 12px;
+
+  color: #71859a;
+}
+
+.stock-price strong {
+  font-size: 15px;
+
+  color: #ffffff;
+}
+
+
+/* =========================================
+   STOCK CHANGE
+========================================= */
+
+.stock-change {
+  font-size: 14px;
+
+  font-weight: bold;
+}
+
+
+/* =========================================
+   VIEW BUTTON
+========================================= */
+
+.view-button {
+  width: 75px;
+
+  padding: 9px 12px;
+
+  background: #2563eb;
+
+  color: #ffffff;
+
+  border: none;
+
+  border-radius: 8px;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.view-button:hover {
+  background: #1d4ed8;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 5px 12px rgba(37, 99, 235, 0.25);
+}
+
+.view-button:active {
+  transform: translateY(0);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+  .midcpnifty-details {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .midcpnifty-stock-item {
+    grid-template-columns:
+      45px
+      1fr
+      120px
+      80px;
+  }
+
+  .view-button {
+    display: none;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .midcpnifty-container {
+    padding:
+      15px 10px 30px;
+  }
+
+
+  .midcpnifty-card {
+    padding: 20px;
+  }
+
+
+  .midcpnifty-header h1 {
+    font-size: 25px;
+  }
+
+
+  .midcpnifty-header p {
+    font-size: 13px;
+  }
+
+
+  .midcpnifty-card > h2 {
+    font-size: 32px;
+  }
+
+
+  .midcpnifty-card > p {
+    font-size: 16px;
+  }
+
+
+  /* DETAILS */
+
+  .midcpnifty-details {
+    grid-template-columns:
+      1fr 1fr;
+
+    gap: 8px;
+  }
+
+
+  .detail-box {
+    padding: 12px;
+  }
+
+
+  .detail-box h3 {
+    font-size: 12px;
+  }
+
+
+  .detail-box p {
+    font-size: 14px;
+  }
+
+
+  /* GRAPH */
+
+  .midcpnifty-chart-card {
+    padding: 15px;
+  }
+
+
+  .midcpnifty-chart {
+    height: 320px;
+  }
+
+
+  .chart-header h2 {
+    font-size: 18px;
+  }
+
+
+  .chart-header p {
+    font-size: 12px;
+  }
+
+
+  .chart-live {
+    padding: 6px 10px;
+
+    font-size: 11px;
+  }
+
+
+  /* PERIOD BUTTONS */
+
+  .period-buttons {
+    gap: 7px;
+
+    margin-top: 15px;
+  }
+
+
+  .period-buttons button {
+    padding:
+      8px 13px;
+
+    font-size: 12px;
+  }
+
+
+  /* STOCK CARD */
+
+  .midcpnifty-stocks-card {
+    padding: 15px;
+  }
+
+
+  .stocks-header {
+    align-items: flex-start;
+
+    gap: 10px;
+  }
+
+
+  .stocks-header h2 {
+    font-size: 19px;
+  }
+
+
+  .stocks-header p {
+    font-size: 12px;
+  }
+
+
+  .stocks-header > span {
+    font-size: 11px;
+
+    padding: 6px 10px;
+  }
+
+
+  /* STOCK ITEM */
+
+  .midcpnifty-stock-item {
+    grid-template-columns:
+      40px
+      1fr;
+
+    gap: 10px;
+
+    padding: 12px;
+  }
+
+
+  .stock-logo {
+    width: 36px;
+
+    height: 36px;
+
+    font-size: 15px;
+  }
+
+
+  .stock-name h3 {
+    font-size: 14px;
+  }
+
+
+  .stock-name p {
+    font-size: 11px;
+  }
+
+
+  .stock-price {
+    grid-column: 2;
+  }
+
+
+  .stock-change {
+    grid-column: 2;
+  }
+
+
+  .view-button {
+    display: none;
+  }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 450px) {
+
+  .midcpnifty-header {
+    align-items: flex-start;
+
+    gap: 10px;
+  }
+
+
+  .live-badge {
+    padding:
+      6px 10px;
+
+    font-size: 10px;
+  }
+
+
+  .midcpnifty-card > h2 {
+    font-size: 30px;
+  }
+
+
+  .midcpnifty-details {
+    grid-template-columns:
+      1fr;
+  }
+
+
+  .chart-header {
+    align-items: flex-start;
+
+    gap: 10px;
+  }
+
+
+  .chart-live {
+    font-size: 10px;
+
+    padding:
+      6px 9px;
+  }
+
+
+  .stocks-header {
+    align-items: flex-start;
+  }
+
+
+  .stocks-header > span {
+    font-size: 10px;
+
+    padding:
+      6px 9px;
+  }
+
+
+  .period-buttons button {
+    flex: 1;
+
+    min-width: 45px;
+  }
+
+}
+

@@ -1,0 +1,526 @@
+
+/* =========================================
+   GLOBAL
+========================================= */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* =========================================
+   EXPLORE PAGE
+========================================= */
+
+.explore {
+  min-height: 100vh;
+
+  padding: 70px 40px 80px;
+
+  background: #07111f;
+
+  color: #ffffff;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+}
+
+
+/* =========================================
+   EXPLORE TITLE
+========================================= */
+
+.explore > h1 {
+  text-align: center;
+
+  font-size: 42px;
+
+  font-weight: 800;
+
+  letter-spacing: -1px;
+
+  color: #ffffff;
+
+  margin-bottom: 12px;
+}
+
+
+/* =========================================
+   EXPLORE DESCRIPTION
+========================================= */
+
+.explore > p {
+  text-align: center;
+
+  color: #94a3b8;
+
+  font-size: 16px;
+
+  line-height: 1.6;
+
+  margin-bottom: 50px;
+}
+
+
+/* =========================================
+   EXPLORE CARDS CONTAINER
+========================================= */
+
+.explore-cards {
+
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 24px;
+}
+
+
+/* =========================================
+   EXPLORE CARD
+========================================= */
+
+.explore-cards .card {
+
+  position: relative;
+
+  min-height: 210px;
+
+  padding: 30px 25px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: center;
+
+  text-align: center;
+
+  cursor: pointer;
+
+  background: #0b192b;
+
+  border: 1px solid #1b3048;
+
+  border-radius: 18px;
+
+  overflow: hidden;
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+/* =========================================
+   CARD TOP LINE
+========================================= */
+
+.explore-cards .card::before {
+
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+
+  left: 0;
+
+  width: 100%;
+
+  height: 3px;
+
+  background: #2563eb;
+
+  transform: scaleX(0);
+
+  transform-origin: left;
+
+  transition: transform 0.3s ease;
+}
+
+
+/* =========================================
+   CARD HOVER
+========================================= */
+
+.explore-cards .card:hover {
+
+  transform: translateY(-8px);
+
+  background: #0e2137;
+
+  border-color: #2563eb;
+
+  box-shadow:
+    0 18px 40px rgba(37, 99, 235, 0.18);
+}
+
+
+.explore-cards .card:hover::before {
+
+  transform: scaleX(1);
+}
+
+
+/* =========================================
+   CARD TITLE
+========================================= */
+
+.explore-cards .card h3 {
+
+  font-size: 23px;
+
+  font-weight: 800;
+
+  color: #ffffff;
+
+  margin-bottom: 12px;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+.explore-cards .card:hover h3 {
+
+  color: #60a5fa;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================
+   CARD DESCRIPTION
+========================================= */
+
+.explore-cards .card p {
+
+  max-width: 220px;
+
+  color: #94a3b8;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================
+   CARD FOCUS
+========================================= */
+
+.explore-cards .card:focus {
+
+  outline: none;
+
+  border-color: #60a5fa;
+
+  box-shadow:
+    0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+
+/* =========================================
+   ACTIVE
+========================================= */
+
+.explore-cards .card:active {
+
+  transform: translateY(-4px) scale(0.98);
+}
+
+
+/* =========================================
+   STOCK CARD
+========================================= */
+
+.explore-cards .card:nth-child(1) {
+
+  background:
+    linear-gradient(
+      145deg,
+      #0b192b,
+      #0a1c32
+    );
+}
+
+
+/* =========================================
+   MUTUAL FUND CARD
+========================================= */
+
+.explore-cards .card:nth-child(2) {
+
+  background:
+    linear-gradient(
+      145deg,
+      #0b192b,
+      #0a2030
+    );
+}
+
+
+/* =========================================
+   ETF CARD
+========================================= */
+
+.explore-cards .card:nth-child(3) {
+
+  background:
+    linear-gradient(
+      145deg,
+      #0b192b,
+      #101d35
+    );
+}
+
+
+/* =========================================
+   IPO CARD
+========================================= */
+
+.explore-cards .card:nth-child(4) {
+
+  background:
+    linear-gradient(
+      145deg,
+      #0b192b,
+      #1a1832
+    );
+}
+
+
+/* =========================================
+   GENERAL CARD HOVER
+========================================= */
+
+.explore-cards .card:nth-child(1):hover,
+.explore-cards .card:nth-child(2):hover,
+.explore-cards .card:nth-child(3):hover,
+.explore-cards .card:nth-child(4):hover {
+
+  background: #0e2137;
+
+}
+
+
+/* =========================================
+   DESKTOP LARGE
+========================================= */
+
+@media (min-width: 1400px) {
+
+  .explore {
+
+    padding-top: 90px;
+
+  }
+
+  .explore-cards {
+
+    max-width: 1300px;
+
+  }
+
+  .explore-cards .card {
+
+    min-height: 230px;
+
+  }
+
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+
+  .explore {
+
+    padding:
+      60px 30px
+      70px;
+
+  }
+
+  .explore > h1 {
+
+    font-size: 38px;
+
+  }
+
+  .explore-cards {
+
+    grid-template-columns:
+      repeat(2, 1fr);
+
+    max-width: 800px;
+
+  }
+
+}
+
+
+/* =========================================
+   SMALL TABLET
+========================================= */
+
+@media (max-width: 700px) {
+
+  .explore {
+
+    padding:
+      50px 20px
+      60px;
+
+  }
+
+  .explore > h1 {
+
+    font-size: 34px;
+
+  }
+
+  .explore > p {
+
+    font-size: 15px;
+
+    margin-bottom: 35px;
+
+  }
+
+  .explore-cards {
+
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+
+    max-width: 500px;
+
+  }
+
+  .explore-cards .card {
+
+    min-height: 180px;
+
+    padding: 28px 22px;
+
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+  .explore {
+
+    padding:
+      40px 16px
+      50px;
+
+  }
+
+  .explore > h1 {
+
+    font-size: 30px;
+
+  }
+
+  .explore > p {
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+    margin-bottom: 30px;
+
+  }
+
+  .explore-cards {
+
+    gap: 15px;
+
+  }
+
+  .explore-cards .card {
+
+    min-height: 165px;
+
+    padding: 25px 18px;
+
+    border-radius: 16px;
+
+  }
+
+  .explore-cards .card h3 {
+
+    font-size: 21px;
+
+  }
+
+  .explore-cards .card p {
+
+    font-size: 13px;
+
+  }
+
+}
+
+
+/* =========================================
+   VERY SMALL MOBILE
+========================================= */
+
+@media (max-width: 360px) {
+
+  .explore {
+
+    padding:
+      35px 12px
+      45px;
+
+  }
+
+  .explore > h1 {
+
+    font-size: 27px;
+
+  }
+
+  .explore-cards .card {
+
+    min-height: 150px;
+
+    padding: 22px 15px;
+
+  }
+
+  .explore-cards .card h3 {
+
+    font-size: 19px;
+
+  }
+
+}
+

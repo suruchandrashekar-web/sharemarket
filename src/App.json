@@ -1,0 +1,587 @@
+
+{
+  "stocks": [
+    {
+      "id": 1,
+      "name": "Adani Ports",
+      "symbol": "ADANIPORTS",
+      "price": 1450.25,
+      "change": 12.35,
+      "percentage": 0.86
+    },
+    {
+      "id": 2,
+      "name": "Asian Paints",
+      "symbol": "ASIANPAINT",
+      "price": 2456.80,
+      "change": -18.45,
+      "percentage": -0.75
+    },
+    {
+      "id": 3,
+      "name": "Axis Bank",
+      "symbol": "AXISBANK",
+      "price": 1125.60,
+      "change": 8.25,
+      "percentage": 0.74
+    },
+    {
+      "id": 4,
+      "name": "Bajaj Finance",
+      "symbol": "BAJFINANCE",
+      "price": 9850.40,
+      "change": 45.20,
+      "percentage": 0.46
+    },
+    {
+      "id": 5,
+      "name": "Bajaj Finserv",
+      "symbol": "BAJAJFINSV",
+      "price": 1985.75,
+      "change": 16.30,
+      "percentage": 0.83
+    },
+    {
+      "id": 6,
+      "name": "Bharti Airtel",
+      "symbol": "BHARTIARTL",
+      "price": 1925.50,
+      "change": 22.45,
+      "percentage": 1.18
+    },
+    {
+      "id": 7,
+      "name": "Eternal",
+      "symbol": "ETERNAL",
+      "price": 285.65,
+      "change": 4.85,
+      "percentage": 1.73
+    },
+    {
+      "id": 8,
+      "name": "HCL Technologies",
+      "symbol": "HCLTECH",
+      "price": 1685.30,
+      "change": -12.60,
+      "percentage": -0.74
+    },
+    {
+      "id": 9,
+      "name": "HDFC Bank",
+      "symbol": "HDFCBANK",
+      "price": 1985.25,
+      "change": 15.75,
+      "percentage": 0.80
+    },
+    {
+      "id": 10,
+      "name": "Hindustan Unilever",
+      "symbol": "HINDUNILVR",
+      "price": 2525.60,
+      "change": -8.40,
+      "percentage": -0.33
+    },
+    {
+      "id": 11,
+      "name": "ICICI Bank",
+      "symbol": "ICICIBANK",
+      "price": 1425.80,
+      "change": 18.35,
+      "percentage": 1.30
+    },
+    {
+      "id": 12,
+      "name": "IndusInd Bank",
+      "symbol": "INDUSINDBK",
+      "price": 965.45,
+      "change": -14.25,
+      "percentage": -1.45
+    },
+    {
+      "id": 13,
+      "name": "Infosys",
+      "symbol": "INFY",
+      "price": 1585.70,
+      "change": 12.50,
+      "percentage": 0.79
+    },
+    {
+      "id": 14,
+      "name": "ITC",
+      "symbol": "ITC",
+      "price": 425.35,
+      "change": 3.25,
+      "percentage": 0.77
+    },
+    {
+      "id": 15,
+      "name": "Kotak Mahindra Bank",
+      "symbol": "KOTAKBANK",
+      "price": 1875.40,
+      "change": -9.65,
+      "percentage": -0.51
+    },
+    {
+      "id": 16,
+      "name": "Larsen & Toubro",
+      "symbol": "LT",
+      "price": 3825.75,
+      "change": 28.40,
+      "percentage": 0.75
+    },
+    {
+      "id": 17,
+      "name": "Mahindra & Mahindra",
+      "symbol": "M&M",
+      "price": 3255.60,
+      "change": 35.25,
+      "percentage": 1.10
+    },
+    {
+      "id": 18,
+      "name": "Maruti Suzuki",
+      "symbol": "MARUTI",
+      "price": 12850.30,
+      "change": -45.60,
+      "percentage": -0.35
+    },
+    {
+      "id": 19,
+      "name": "NTPC",
+      "symbol": "NTPC",
+      "price": 385.75,
+      "change": 5.45,
+      "percentage": 1.43
+    },
+    {
+      "id": 20,
+      "name": "Power Grid Corporation",
+      "symbol": "POWERGRID",
+      "price": 345.20,
+      "change": 2.85,
+      "percentage": 0.83
+    },
+    {
+      "id": 21,
+      "name": "Reliance Industries",
+      "symbol": "RELIANCE",
+      "price": 2855.65,
+      "change": 24.30,
+      "percentage": 0.86
+    },
+    {
+      "id": 22,
+      "name": "State Bank of India",
+      "symbol": "SBIN",
+      "price": 865.45,
+      "change": 7.25,
+      "percentage": 0.85
+    },
+    {
+      "id": 23,
+      "name": "Sun Pharmaceutical",
+      "symbol": "SUNPHARMA",
+      "price": 1785.60,
+      "change": -11.35,
+      "percentage": -0.63
+    },
+    {
+      "id": 24,
+      "name": "Tata Consultancy Services",
+      "symbol": "TCS",
+      "price": 3425.80,
+      "change": 18.75,
+      "percentage": 0.55
+    },
+    {
+      "id": 25,
+      "name": "Tata Motors",
+      "symbol": "TATAMOTORS",
+      "price": 685.40,
+      "change": 6.85,
+      "percentage": 1.01
+    },
+    {
+      "id": 26,
+      "name": "Tata Steel",
+      "symbol": "TATASTEEL",
+      "price": 185.75,
+      "change": -2.35,
+      "percentage": -1.25
+    },
+    {
+      "id": 27,
+      "name": "Tech Mahindra",
+      "symbol": "TECHM",
+      "price": 1685.25,
+      "change": 14.60,
+      "percentage": 0.87
+    },
+    {
+      "id": 28,
+      "name": "Titan Company",
+      "symbol": "TITAN",
+      "price": 3655.80,
+      "change": 21.45,
+      "percentage": 0.59
+    },
+    {
+      "id": 29,
+      "name": "Trent",
+      "symbol": "TRENT",
+      "price": 5350.25,
+      "change": -25.40,
+      "percentage": -0.47
+    },
+    {
+      "id": 30,
+      "name": "UltraTech Cement",
+      "symbol": "ULTRACEMCO",
+      "price": 12550.60,
+      "change": 65.30,
+      "percentage": 0.52
+    },
+    {
+      "id": 31,
+      "name": "Bank of Baroda",
+      "symbol": "BANKBARODA",
+      "price": 245.26,
+      "change": 0.03,
+      "percentage": 0.03
+    },
+    {
+      "id": 32,
+      "name": "Punjab National Bank",
+      "symbol": "PNB",
+      "price": 118.76,
+      "change": -0.02,
+      "percentage": -0.02
+    },
+    {
+      "id": 33,
+      "name": "Canara Bank",
+      "symbol": "CANBK",
+      "price": 118.65,
+      "change": -0.04,
+      "percentage": -0.04
+    },
+    {
+      "id": 34,
+      "name": "IDFC First Bank",
+      "symbol": "IDFCFIRSTB",
+      "price": 78.53,
+      "change": -0.06,
+      "percentage": -0.06
+    },
+    {
+      "id": 35,
+      "name": "Federal Bank",
+      "symbol": "FEDERALBNK",
+      "price": 198.07,
+      "change": -0.04,
+      "percentage": -0.04
+    },
+    {
+      "id": 36,
+      "name": "AU Small Finance Bank",
+      "symbol": "AUBANK",
+      "price": 726.60,
+      "change": -0.04,
+      "percentage": -0.04
+    },
+    {
+      "id": 37,
+      "name": "Bandhan Bank",
+      "symbol": "BANDHANBNK",
+      "price": 175.59,
+      "change": -0.03,
+      "percentage": -0.03
+    },
+    {
+      "id": 38,
+      "name": "Bank of India",
+      "symbol": "BANKINDIA",
+      "price": 108.35,
+      "change": 0.06,
+      "percentage": 0.06
+    },
+    {
+      "id": 39,
+      "name": "Indian Bank",
+      "symbol": "INDIANB",
+      "price": 620.13,
+      "change": -0.01,
+      "percentage": -0.01
+    },
+    {
+      "id": 40,
+      "name": "BSE Limited",
+      "symbol": "BSE",
+      "price": 2446.29,
+      "change": -0.03,
+      "percentage": -0.03
+    },
+    {
+      "id": 41,
+      "name": "Suzlon Energy",
+      "symbol": "SUZLON",
+      "price": 68.18,
+      "change": -0.06,
+      "percentage": -0.06
+    },
+    {
+      "id": 42,
+      "name": "Hero MotoCorp",
+      "symbol": "HEROMOTOCO",
+      "price": 5856.09,
+      "change": 0.09,
+      "percentage": 0.09
+    },
+    {
+      "id": 43,
+      "name": "PB Fintech",
+      "symbol": "POLICYBZR",
+      "price": 1830.50,
+      "change": 0.10,
+      "percentage": 0.10
+    },
+    {
+      "id": 44,
+      "name": "Lupin",
+      "symbol": "LUPIN",
+      "price": 2143.66,
+      "change": 0.05,
+      "percentage": 0.05
+    },
+    {
+      "id": 45,
+      "name": "Indus Towers",
+      "symbol": "INDUSTOWER",
+      "price": 419.96,
+      "change": -0.01,
+      "percentage": -0.01
+    },
+    {
+      "id": 46,
+      "name": "Persistent Systems",
+      "symbol": "PERSISTENT",
+      "price": 5851.01,
+      "change": -0.01,
+      "percentage": -0.01
+    },
+    {
+      "id": 47,
+      "name": "Bharat Heavy Electricals",
+      "symbol": "BHEL",
+      "price": 285.49,
+      "change": -0.04,
+      "percentage": -0.04
+    },
+    {
+      "id": 48,
+      "name": "Dixon Technologies",
+      "symbol": "DIXON",
+      "price": 13546.78,
+      "change": -0.09,
+      "percentage": -0.09
+    },
+    {
+      "id": 49,
+      "name": "Coforge",
+      "symbol": "COFORGE",
+      "price": 1683.48,
+      "change": -0.07,
+      "percentage": -0.07
+    },
+    {
+      "id": 50,
+      "name": "Cummins India",
+      "symbol": "CUMMINSIND",
+      "price": 4240.18,
+      "change": -0.07,
+      "percentage": -0.07
+    },
+    {
+      "id": 51,
+      "name": "HDFC Asset Management",
+      "symbol": "HDFCAMC",
+      "price": 4854.30,
+      "change": -0.04,
+      "percentage": -0.04
+    },
+    {
+      "id": 52,
+      "name": "Max Healthcare",
+      "symbol": "MAXHEALTH",
+      "price": 1123.63,
+      "change": -0.08,
+      "percentage": -0.08
+    },
+    {
+      "id": 53,
+      "name": "Mphasis",
+      "symbol": "MPHASIS",
+      "price": 3156.04,
+      "change": 0.09,
+      "percentage": 0.09
+    },
+    {
+      "id": 54,
+      "name": "SRF Limited",
+      "symbol": "SRF",
+      "price": 2659.61,
+      "change": 0.06,
+      "percentage": 0.06
+    },
+    {
+      "id": 55,
+      "name": "Colgate-Palmolive",
+      "symbol": "COLPAL",
+      "price": 2858.09,
+      "change": 0.08,
+      "percentage": 0.08
+    },
+    {
+      "id": 56,
+      "name": "Page Industries",
+      "symbol": "PAGEIND",
+      "price": 42366.17,
+      "change": -0.07,
+      "percentage": -0.07
+    },
+    {
+      "id": 57,
+      "name": "Voltas",
+      "symbol": "VOLTAS",
+      "price": 1249.50,
+      "change": 0.08,
+      "percentage": 0.08
+    },
+    {
+      "id": 58,
+      "name": "Shriram Finance",
+      "symbol": "SHRIRAMFIN",
+      "price": 2648.98,
+      "change": 0.01,
+      "percentage": 0.01
+    },
+    {
+      "id": 59,
+      "name": "SBI Life Insurance",
+      "symbol": "SBILIFE",
+      "price": 1783.99,
+      "change": -0.03,
+      "percentage": -0.03
+    },
+    {
+      "id": 60,
+      "name": "Cholamandalam Investment",
+      "symbol": "CHOLAFIN",
+      "price": 1486.69,
+      "change": 0.10,
+      "percentage": 0.10
+    },
+    {
+      "id": 61,
+      "name": "Jio Financial Services",
+      "symbol": "JIOFIN",
+      "price": 324.84,
+      "change": 0.08,
+      "percentage": 0.08
+    },
+    {
+      "id": 62,
+      "name": "Muthoot Finance",
+      "symbol": "MUTHOOTFIN",
+      "price": 2480.47,
+      "change": -0.05,
+      "percentage": -0.05
+    },
+    {
+      "id": 63,
+      "name": "HDFC Life Insurance",
+      "symbol": "HDFCLIFE",
+      "price": 735.22,
+      "change": 0.08,
+      "percentage": 0.08
+    },
+    {
+      "id": 64,
+      "name": "Power Finance Corporation",
+      "symbol": "PFC",
+      "price": 450.58,
+      "change": 0.10,
+      "percentage": 0.10
+    },
+    {
+      "id": 65,
+      "name": "REC Limited",
+      "symbol": "RECLTD",
+      "price": 385.57,
+      "change": 0.07,
+      "percentage": 0.07
+    },
+    {
+      "id": 66,
+      "name": "ICICI Lombard",
+      "symbol": "ICICIGI",
+      "price": 1845.27,
+      "change": -0.04,
+      "percentage": -0.04
+    },
+    {
+      "id": 67,
+      "name": "SBI Cards",
+      "symbol": "SBICARD",
+      "price": 922.59,
+      "change": 0.09,
+      "percentage": 0.09
+    },
+    {
+      "id": 68,
+      "name": "Max Financial Services",
+      "symbol": "MFSL",
+      "price": 1251.32,
+      "change": 0.09,
+      "percentage": 0.09
+    },
+    {
+      "id": 69,
+      "name": "Union Bank of India",
+      "symbol": "UNIONBANK",
+      "price": 184.86,
+      "change": 0.04,
+      "percentage": 0.04
+    },
+    {
+      "id": 70,
+      "name": "Yes Bank",
+      "symbol": "YESBANK",
+      "price": 22.11,
+      "change": -0.06,
+      "percentage": -0.06
+    }
+  ],
+
+  "mutualFunds": [
+    {
+      "id": 101,
+      "symbol": "SBI",
+      "name": "SBI Blue Chip Fund",
+      "price": 85.50
+    },
+    {
+      "id": 102,
+      "symbol": "HDFC",
+      "name": "HDFC Flexi Cap Fund",
+      "price": 120.25
+    },
+    {
+      "id": 103,
+      "symbol": "ICICI",
+      "name": "ICICI Prudential Fund",
+      "price": 95.75
+    }
+  ]
+}
+

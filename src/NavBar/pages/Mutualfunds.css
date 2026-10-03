@@ -1,0 +1,628 @@
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #07111f;
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   MAIN PAGE
+========================================================= */
+
+.mutual-page {
+  min-height: 100vh;
+  padding: 30px 40px 60px;
+
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(37, 99, 235, 0.15),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at bottom left,
+      rgba(14, 165, 233, 0.08),
+      transparent 28%
+    ),
+    #07111f;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.mutual-header {
+  max-width: 1400px;
+  margin: 0 auto 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 5px 0;
+}
+
+.mutual-header h1 {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+
+  color: #ffffff;
+}
+
+.mutual-header p {
+  margin-top: 7px;
+
+  color: #8fa1b5;
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   LIVE BADGE
+========================================================= */
+
+.live-badge {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  padding: 9px 15px;
+
+  border: 1px solid #14532d;
+  border-radius: 20px;
+
+  background: rgba(34, 197, 94, 0.08);
+
+  color: #22c55e;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  box-shadow:
+    0 0 15px rgba(34, 197, 94, 0.05);
+}
+
+
+/* =========================================================
+   FUND LIST
+========================================================= */
+
+.fund-list {
+  max-width: 1400px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+
+/* =========================================================
+   FUND CARD
+========================================================= */
+
+.fund-card {
+  display: grid;
+
+  grid-template-columns:
+    58px
+    1.7fr
+    150px
+    110px
+    90px;
+
+  align-items: center;
+  gap: 20px;
+
+  min-height: 92px;
+
+  padding: 16px 20px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(17, 32, 52, 0.98),
+      rgba(9, 23, 39, 0.98)
+    );
+
+  border: 1px solid #1c334d;
+
+  border-radius: 14px;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+/* =========================================================
+   CARD HOVER
+========================================================= */
+
+.fund-card:hover {
+  transform: translateY(-3px);
+
+  border-color: #2563eb;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(20, 42, 70, 0.98),
+      rgba(10, 28, 48, 0.98)
+    );
+
+  box-shadow:
+    0 10px 35px rgba(0, 0, 0, 0.3),
+    0 0 20px rgba(37, 99, 235, 0.08);
+}
+
+
+/* =========================================================
+   FUND LOGO
+========================================================= */
+
+.fund-logo {
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #2563eb,
+      #0ea5e9
+    );
+
+  color: #ffffff;
+
+  font-size: 20px;
+  font-weight: 700;
+
+  box-shadow:
+    0 5px 18px rgba(37, 99, 235, 0.25);
+}
+
+
+/* =========================================================
+   FUND INFORMATION
+========================================================= */
+
+.fund-info {
+  min-width: 0;
+}
+
+.fund-info h3 {
+  color: #ffffff;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  letter-spacing: 0.2px;
+}
+
+.fund-info p {
+  margin-top: 6px;
+
+  color: #8294a8;
+
+  font-size: 12px;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+/* =========================================================
+   PRICE
+========================================================= */
+
+.fund-price {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.fund-price span {
+  margin-bottom: 5px;
+
+  color: #71849a;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 0.7px;
+}
+
+.fund-price strong {
+  color: #ffffff;
+
+  font-size: 17px;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   CHANGE
+========================================================= */
+
+.fund-change {
+  justify-self: center;
+
+  min-width: 75px;
+
+  padding: 7px 9px;
+
+  border-radius: 7px;
+
+  text-align: center;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   POSITIVE
+========================================================= */
+
+.fund-change.positive {
+  color: #22c55e;
+
+  background: rgba(34, 197, 94, 0.08);
+
+  border: 1px solid rgba(34, 197, 94, 0.2);
+}
+
+
+/* =========================================================
+   NEGATIVE
+========================================================= */
+
+.fund-change.negative {
+  color: #ef4444;
+
+  background: rgba(239, 68, 68, 0.08);
+
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+
+/* =========================================================
+   VIEW BUTTON
+========================================================= */
+
+.fund-card button {
+  width: 80px;
+
+  padding: 9px 12px;
+
+  border: 1px solid #2563eb;
+
+  border-radius: 8px;
+
+  background: rgba(37, 99, 235, 0.10);
+
+  color: #60a5fa;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.fund-card button:hover {
+  background: #2563eb;
+
+  color: #ffffff;
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   EMPTY LIST
+========================================================= */
+
+.fund-list:empty::after {
+  content: "Loading Mutual Funds...";
+
+  display: block;
+
+  padding: 60px 20px;
+
+  text-align: center;
+
+  color: #71849a;
+
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   SCROLLBAR
+========================================================= */
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #07111f;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e3a5f;
+
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2563eb;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .mutual-page {
+    padding: 25px 20px 50px;
+  }
+
+  .fund-card {
+    grid-template-columns:
+      52px
+      1.5fr
+      120px
+      90px
+      75px;
+
+    gap: 12px;
+
+    padding: 15px;
+  }
+
+  .fund-logo {
+    width: 45px;
+    height: 45px;
+
+    font-size: 18px;
+  }
+
+  .fund-info h3 {
+    font-size: 14px;
+  }
+
+  .fund-price strong {
+    font-size: 15px;
+  }
+
+  .fund-change {
+    min-width: 65px;
+
+    font-size: 10px;
+  }
+
+  .fund-card button {
+    width: 65px;
+
+    padding: 8px 7px;
+
+    font-size: 10px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+  .mutual-page {
+    padding: 18px 10px 40px;
+  }
+
+
+  /* HEADER */
+
+  .mutual-header {
+    margin-bottom: 20px;
+
+    align-items: flex-start;
+
+    gap: 12px;
+  }
+
+  .mutual-header h1 {
+    font-size: 23px;
+  }
+
+  .mutual-header p {
+    font-size: 11px;
+  }
+
+  .live-badge {
+    padding: 7px 10px;
+
+    font-size: 9px;
+  }
+
+
+  /* FUND CARD */
+
+  .fund-list {
+    gap: 10px;
+  }
+
+  .fund-card {
+    grid-template-columns:
+      45px
+      1fr
+      80px;
+
+    gap: 12px;
+
+    min-height: 90px;
+
+    padding: 13px;
+  }
+
+
+  /* LOGO */
+
+  .fund-logo {
+    width: 42px;
+    height: 42px;
+
+    border-radius: 10px;
+
+    font-size: 16px;
+  }
+
+
+  /* INFO */
+
+  .fund-info h3 {
+    font-size: 13px;
+  }
+
+  .fund-info p {
+    font-size: 10px;
+
+    max-width: 150px;
+  }
+
+
+  /* PRICE */
+
+  .fund-price {
+    align-items: flex-end;
+  }
+
+  .fund-price span {
+    font-size: 8px;
+  }
+
+  .fund-price strong {
+    font-size: 14px;
+  }
+
+
+  /* CHANGE */
+
+  .fund-change {
+    grid-column: 2;
+
+    justify-self: start;
+
+    min-width: 65px;
+
+    margin-top: -5px;
+
+    padding: 5px 8px;
+
+    font-size: 9px;
+  }
+
+
+  /* BUTTON */
+
+  .fund-card button {
+    grid-column: 3;
+    grid-row: 2;
+
+    width: 70px;
+
+    padding: 7px;
+
+    font-size: 9px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .mutual-page {
+    padding: 15px 8px 35px;
+  }
+
+  .mutual-header h1 {
+    font-size: 20px;
+  }
+
+  .fund-card {
+    grid-template-columns:
+      40px
+      1fr
+      70px;
+
+    gap: 9px;
+
+    padding: 11px;
+  }
+
+  .fund-logo {
+    width: 38px;
+    height: 38px;
+
+    font-size: 14px;
+  }
+
+  .fund-info h3 {
+    font-size: 11px;
+  }
+
+  .fund-info p {
+    font-size: 9px;
+  }
+
+  .fund-price strong {
+    font-size: 12px;
+  }
+
+  .fund-change {
+    font-size: 8px;
+  }
+
+  .fund-card button {
+    width: 60px;
+
+    font-size: 8px;
+  }
+}
+

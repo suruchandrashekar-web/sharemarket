@@ -1,0 +1,822 @@
+
+/* =========================================
+   GLOBAL
+========================================= */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #07111f;
+  color: #ffffff;
+}
+
+
+/* =========================================
+   MAIN APP
+========================================= */
+
+.app {
+  min-height: 100vh;
+  padding-bottom: 70px;
+  background: #07111f;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.market-header {
+  width: 100%;
+  min-height: 100px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 20px 60px;
+
+  background: #0b1728;
+
+  border-bottom: 1px solid #1c3048;
+
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+.market-header h1 {
+  font-size: 30px;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.5px;
+}
+
+.market-header p {
+  margin-top: 6px;
+  color: #8fa3b8;
+  font-size: 14px;
+}
+
+
+/* =========================================
+   MARKET STATUS
+========================================= */
+
+.market-status {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  padding: 10px 18px;
+
+  background: #08291f;
+
+  color: #00d084;
+
+  border: 1px solid #075b3e;
+
+  border-radius: 30px;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  box-shadow: 0 5px 18px rgba(0, 208, 132, 0.08);
+}
+
+.status-dot {
+  width: 10px;
+  height: 10px;
+
+  background: #00d084;
+
+  border-radius: 50%;
+
+  animation: livePulse 1.5s infinite;
+}
+
+@keyframes livePulse {
+
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 208, 132, 0.5);
+  }
+
+  70% {
+    box-shadow: 0 0 0 8px rgba(0, 208, 132, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 208, 132, 0);
+  }
+
+}
+
+
+/* =========================================
+   DASHBOARD
+========================================= */
+
+.dashboard {
+  max-width: 1400px;
+
+  margin: 35px auto;
+
+  padding: 0 30px;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 20px;
+}
+
+
+/* =========================================
+   DASHBOARD CARD
+========================================= */
+
+.dashboard-card {
+
+  background: #0b192b;
+
+  padding: 25px;
+
+  border-radius: 16px;
+
+  border: 1px solid #1b3048;
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.25);
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 9px;
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+
+}
+
+.dashboard-card:hover {
+
+  transform: translateY(-4px);
+
+  border-color: #294967;
+
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.35);
+
+}
+
+.dashboard-card span {
+
+  color: #8fa3b8;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+}
+
+.dashboard-card strong {
+
+  font-size: 27px;
+
+  color: #ffffff;
+
+}
+
+
+/* =========================================
+   SECTION
+========================================= */
+
+.stock-section {
+
+  max-width: 1400px;
+
+  margin: 45px auto 0;
+
+  padding: 0 30px;
+
+}
+
+
+/* =========================================
+   SECTION TITLE
+========================================= */
+
+.section-title {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 20px;
+
+}
+
+.section-title h2 {
+
+  font-size: 25px;
+
+  font-weight: 800;
+
+  color: #ffffff;
+
+}
+
+.section-title p {
+
+  margin-top: 6px;
+
+  color: #8fa3b8;
+
+  font-size: 14px;
+
+}
+
+
+/* =========================================
+   STOCK CONTAINER
+========================================= */
+
+.stock-container {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 20px;
+
+}
+
+
+/* =========================================
+   STOCK CARD
+========================================= */
+
+.stock-card {
+
+  background: #0b192b;
+
+  border: 1px solid #1c344d;
+
+  border-radius: 18px;
+
+  padding: 22px;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease;
+
+  position: relative;
+
+  overflow: hidden;
+
+}
+
+
+/* TOP BLUE LINE */
+
+.stock-card::before {
+
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+
+  height: 3px;
+
+  background: #3b82f6;
+
+  transform: scaleX(0);
+
+  transform-origin: left;
+
+  transition: 0.3s;
+
+}
+
+
+/* CARD HOVER */
+
+.stock-card:hover {
+
+  transform: translateY(-6px);
+
+  border-color: #2563eb;
+
+  background: #0e2036;
+
+  box-shadow:
+    0 15px 35px rgba(37, 99, 235, 0.16);
+
+}
+
+.stock-card:hover::before {
+
+  transform: scaleX(1);
+
+}
+
+
+/* =========================================
+   STOCK TOP
+========================================= */
+
+.stock-top {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+
+}
+
+
+/* =========================================
+   STOCK LOGO
+========================================= */
+
+.stock-logo {
+
+  width: 48px;
+
+  height: 48px;
+
+  min-width: 48px;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  background: #102846;
+
+  color: #60a5fa;
+
+  border-radius: 12px;
+
+  font-size: 20px;
+
+  font-weight: 800;
+
+  border: 1px solid #24518a;
+
+  box-shadow:
+    0 5px 15px rgba(37, 99, 235, 0.12);
+
+}
+
+
+/* =========================================
+   STOCK NAME
+========================================= */
+
+.stock-top h3 {
+
+  font-size: 17px;
+
+  color: #ffffff;
+
+  font-weight: 800;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+
+}
+
+.stock-top p {
+
+  margin-top: 4px;
+
+  color: #8297ad;
+
+  font-size: 12px;
+
+  max-width: 180px;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+
+}
+
+
+/* =========================================
+   STOCK PRICE
+========================================= */
+
+.stock-price {
+
+  margin-top: 25px;
+
+  font-size: 25px;
+
+  font-weight: 800;
+
+  color: #ffffff;
+
+}
+
+
+/* =========================================
+   CHANGE
+========================================= */
+
+.change {
+
+  display: inline-block;
+
+  margin-top: 10px;
+
+  padding: 6px 10px;
+
+  border-radius: 7px;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+}
+
+
+/* =========================================
+   POSITIVE
+========================================= */
+
+.change.positive {
+
+  background: #08291f;
+
+  color: #00d084;
+
+  border: 1px solid #075b3e;
+
+}
+
+
+/* =========================================
+   NEGATIVE
+========================================= */
+
+.change.negative {
+
+  background: #351016;
+
+  color: #ff5c5c;
+
+  border: 1px solid #6b2028;
+
+}
+
+
+/* =========================================
+   VIEW DETAILS
+========================================= */
+
+.view-stock {
+
+  margin-top: 20px;
+
+  padding-top: 15px;
+
+  border-top: 1px solid #1c344d;
+
+  color: #60a5fa;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+
+}
+
+.stock-card:hover .view-stock {
+
+  color: #93c5fd;
+
+  transform: translateX(4px);
+
+}
+
+
+/* =========================================
+   SHOW ALL CONTAINER
+========================================= */
+
+.show-all-container {
+
+  display: flex;
+
+  justify-content: center;
+
+  margin-top: 35px;
+
+}
+
+
+/* =========================================
+   SHOW ALL BUTTON
+========================================= */
+
+.show-all-button {
+
+  border: none;
+
+  outline: none;
+
+  cursor: pointer;
+
+  padding: 13px 30px;
+
+  border-radius: 10px;
+
+  background: #2563eb;
+
+  color: #ffffff;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  box-shadow:
+    0 6px 18px rgba(37, 99, 235, 0.28);
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+
+}
+
+.show-all-button:hover {
+
+  background: #1d4ed8;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 10px 25px rgba(37, 99, 235, 0.4);
+
+}
+
+.show-all-button:active {
+
+  transform: translateY(0);
+
+}
+
+
+/* =========================================
+   SECTION SPACING
+========================================= */
+
+.stock-section + .stock-section {
+
+  margin-top: 55px;
+
+}
+
+
+/* =========================================
+   SCROLLBAR
+========================================= */
+
+::-webkit-scrollbar {
+
+  width: 8px;
+
+}
+
+::-webkit-scrollbar-track {
+
+  background: #07111f;
+
+}
+
+::-webkit-scrollbar-thumb {
+
+  background: #1d3854;
+
+  border-radius: 10px;
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+
+  background: #2b5278;
+
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+
+  .stock-container {
+
+    grid-template-columns:
+      repeat(3, 1fr);
+
+  }
+
+  .market-header {
+
+    padding: 20px 30px;
+
+  }
+
+}
+
+
+/* =========================================
+   TABLET SMALL
+========================================= */
+
+@media (max-width: 850px) {
+
+  .stock-container {
+
+    grid-template-columns:
+      repeat(2, 1fr);
+
+  }
+
+  .dashboard {
+
+    grid-template-columns:
+      repeat(3, 1fr);
+
+    padding: 0 20px;
+
+  }
+
+  .stock-section {
+
+    padding: 0 20px;
+
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .market-header {
+
+    padding: 18px;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 15px;
+
+    position: relative;
+
+  }
+
+  .market-header h1 {
+
+    font-size: 24px;
+
+  }
+
+  .market-status {
+
+    align-self: stretch;
+
+    justify-content: center;
+
+  }
+
+
+  .dashboard {
+
+    grid-template-columns: 1fr;
+
+    margin-top: 20px;
+
+    padding: 0 18px;
+
+  }
+
+
+  .dashboard-card {
+
+    padding: 20px;
+
+  }
+
+
+  .stock-section {
+
+    padding: 0 18px;
+
+    margin-top: 35px;
+
+  }
+
+
+  .section-title h2 {
+
+    font-size: 21px;
+
+  }
+
+
+  .stock-container {
+
+    grid-template-columns: 1fr;
+
+    gap: 15px;
+
+  }
+
+
+  .stock-card {
+
+    padding: 20px;
+
+  }
+
+
+  .stock-price {
+
+    font-size: 23px;
+
+  }
+
+}
+
+
+/* =========================================
+   VERY SMALL MOBILE
+========================================= */
+
+@media (max-width: 380px) {
+
+  .market-header h1 {
+
+    font-size: 21px;
+
+  }
+
+  .section-title h2 {
+
+    font-size: 19px;
+
+  }
+
+  .stock-card {
+
+    padding: 17px;
+
+  }
+
+}
+

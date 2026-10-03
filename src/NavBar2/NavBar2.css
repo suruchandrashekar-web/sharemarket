@@ -1,0 +1,87 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#121212;
+}
+
+/* ================= Wrapper ================= */
+
+.ticker-wrapper{
+    width:100%;
+    padding:0 100px;
+    background:#121212;
+}
+
+/* ================= Container ================= */
+
+.ticker-container{
+    width:100%;
+    height:45px;
+    background:#181818;
+
+    display:flex;
+    align-items:center;
+
+    overflow-x:auto;
+    overflow-y:hidden;
+
+    border-top:1px solid #333;
+    border-bottom:1px solid #333;
+
+    scrollbar-width:none;
+    -ms-overflow-style:none;
+}
+
+.ticker-container::-webkit-scrollbar{
+    display:none;
+}
+
+/* ================= Ticker ================= */
+
+.ticker{
+    display:flex;
+    align-items:center;
+    min-width:max-content;
+    gap:50px;
+    padding:0 20px;
+}
+
+/* ================= Links ================= */
+
+.ticker-link,
+.ticker-link:link,
+.ticker-link:visited,
+.ticker-link:hover,
+.ticker-link:active{
+    text-decoration:none;
+    color:#ffffff;
+    font-size:15px;
+    font-weight:600;
+    white-space:nowrap;
+    display:flex;
+    align-items:center;
+    gap:6px;
+}
+
+.ticker-link:hover{
+    color:#00d09c;
+}
+
+/* ================= Green & Red Numbers ================= */
+
+.green{
+    color:#00d09c;
+    font-size:13px;   /* Number size చిన్నది */
+    font-weight:600;
+}
+
+.red{
+    color:#ff4d4f;
+    font-size:13px;   /* Number size చిన్నది */
+    font-weight:600;
+}

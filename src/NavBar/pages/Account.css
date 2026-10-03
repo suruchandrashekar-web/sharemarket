@@ -1,0 +1,1072 @@
+/* =====================================================
+   ACCOUNT PAGE
+===================================================== */
+
+.account-page {
+  width: 100%;
+  min-height: 100vh;
+
+  padding: 40px 6% 60px;
+
+  background: #07111f;
+  color: #ffffff;
+
+  font-family:
+    Inter,
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  box-sizing: border-box;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.account-header {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 30px;
+}
+
+
+.account-header h1 {
+  margin: 0;
+
+  font-size: 32px;
+  font-weight: 700;
+
+  color: #ffffff;
+}
+
+
+.account-header p {
+  margin: 8px 0 0;
+
+  color: #94a3b8;
+
+  font-size: 15px;
+}
+
+
+/* =====================================================
+   BACK BUTTON
+===================================================== */
+
+.account-back {
+  border: 1px solid #26364a;
+
+  background: #101c2c;
+  color: #ffffff;
+
+  padding: 10px 18px;
+
+  border-radius: 8px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+}
+
+
+.account-back:hover {
+  background: #17283d;
+
+  border-color: #3b82f6;
+
+  transform: translateX(-3px);
+}
+
+
+/* =====================================================
+   PROFILE CARD
+===================================================== */
+
+.account-profile-card {
+  width: 100%;
+
+  min-height: 150px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 25px;
+
+  padding: 25px 30px;
+
+  background: #0d1b2a;
+
+  border: 1px solid #1e3147;
+
+  border-radius: 16px;
+
+  box-sizing: border-box;
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.25);
+
+  margin-bottom: 25px;
+}
+
+
+/* =====================================================
+   PROFILE PHOTO SECTION
+===================================================== */
+
+.profile-photo-section {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  min-width: 150px;
+}
+
+
+/* =====================================================
+   PROFILE AVATAR
+===================================================== */
+
+.profile-avatar {
+  width: 105px;
+  height: 105px;
+
+  border-radius: 50%;
+
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #16283d;
+
+  border: 3px solid #263e59;
+
+  box-shadow:
+    0 5px 20px rgba(0, 0, 0, 0.35);
+
+  box-sizing: border-box;
+}
+
+
+/* =====================================================
+   PROFILE IMAGE
+===================================================== */
+
+.profile-image {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+}
+
+
+/* =====================================================
+   DEFAULT PROFILE ICON
+===================================================== */
+
+.default-profile-icon {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 48px;
+
+  background: #16283d;
+
+  color: #94a3b8;
+}
+
+
+/* =====================================================
+   PHOTO BUTTONS
+===================================================== */
+
+.photo-buttons {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  margin-top: 12px;
+}
+
+
+/* =====================================================
+   CHANGE PHOTO BUTTON
+===================================================== */
+
+.change-photo-button {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 7px 12px;
+
+  border-radius: 7px;
+
+  background: #16283d;
+
+  border: 1px solid #29435f;
+
+  color: #dbeafe;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+}
+
+
+.change-photo-button:hover {
+  background: #1d3550;
+
+  border-color: #3b82f6;
+
+  color: #ffffff;
+}
+
+
+/* =====================================================
+   REMOVE PHOTO BUTTON
+===================================================== */
+
+.remove-photo-button {
+  border: none;
+
+  background: transparent;
+
+  color: #f87171;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  padding: 7px 5px;
+
+  transition: color 0.2s ease;
+}
+
+
+.remove-photo-button:hover {
+  color: #ef4444;
+
+  text-decoration: underline;
+}
+
+
+/* =====================================================
+   PROFILE INFORMATION
+===================================================== */
+
+.profile-information {
+  flex: 1;
+
+  min-width: 0;
+}
+
+
+.profile-information h2 {
+  margin: 0 0 10px;
+
+  color: #ffffff;
+
+  font-size: 25px;
+  font-weight: 700;
+
+  word-break: break-word;
+}
+
+
+.profile-email {
+  margin: 0 0 12px;
+
+  color: #cbd5e1;
+
+  font-size: 15px;
+
+  word-break: break-all;
+}
+
+
+.profile-account-type {
+  display: inline-block;
+
+  padding: 6px 11px;
+
+  border-radius: 20px;
+
+  background: #132a3d;
+
+  border: 1px solid #214563;
+
+  color: #60a5fa;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+
+/* =====================================================
+   ACCOUNT STATUS
+===================================================== */
+
+.account-status {
+  align-self: flex-start;
+
+  margin-left: auto;
+
+  padding: 8px 13px;
+
+  border-radius: 20px;
+
+  background: rgba(34, 197, 94, 0.10);
+
+  border: 1px solid rgba(34, 197, 94, 0.25);
+
+  color: #4ade80;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+
+/* =====================================================
+   BALANCE GRID
+===================================================== */
+
+.account-balance-grid {
+  display: grid;
+
+  grid-template-columns: 1fr;
+
+  margin-bottom: 35px;
+}
+
+
+/* =====================================================
+   BALANCE CARD
+===================================================== */
+
+.balance-card {
+  padding: 28px 30px;
+
+  background: linear-gradient(
+    135deg,
+    #102238,
+    #0c1a2b
+  );
+
+  border: 1px solid #23415f;
+
+  border-radius: 15px;
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+
+.balance-card span {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: #94a3b8;
+
+  font-size: 14px;
+  font-weight: 500;
+}
+
+
+.balance-card strong {
+  display: block;
+
+  color: #ffffff;
+
+  font-size: 32px;
+  font-weight: 700;
+
+  letter-spacing: 0.3px;
+}
+
+
+.balance-card small {
+  display: block;
+
+  margin-top: 8px;
+
+  color: #64748b;
+
+  font-size: 12px;
+}
+
+
+/* =====================================================
+   ACCOUNT SECTION
+===================================================== */
+
+.account-section {
+  margin-top: 10px;
+
+  margin-bottom: 35px;
+}
+
+
+.account-section > h2 {
+  margin: 0 0 18px;
+
+  font-size: 22px;
+  font-weight: 700;
+
+  color: #ffffff;
+}
+
+
+/* =====================================================
+   ACCOUNT MENU GRID
+===================================================== */
+
+.account-menu-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 16px;
+}
+
+
+/* =====================================================
+   ACCOUNT MENU CARD
+===================================================== */
+
+.account-menu-card {
+  min-height: 105px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 16px;
+
+  padding: 20px;
+
+  background: #0d1b2a;
+
+  border: 1px solid #1e3147;
+
+  border-radius: 13px;
+
+  cursor: pointer;
+
+  box-sizing: border-box;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+.account-menu-card:hover {
+  transform: translateY(-4px);
+
+  background: #102238;
+
+  border-color: #315577;
+
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+
+/* =====================================================
+   MENU ICON
+===================================================== */
+
+.menu-icon {
+  width: 48px;
+  height: 48px;
+
+  min-width: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 11px;
+
+  background: #16283d;
+
+  border: 1px solid #243e59;
+
+  font-size: 23px;
+}
+
+
+/* =====================================================
+   MENU CONTENT
+===================================================== */
+
+.account-menu-card > div:nth-child(2) {
+  flex: 1;
+
+  min-width: 0;
+}
+
+
+.account-menu-card h3 {
+  margin: 0 0 6px;
+
+  color: #ffffff;
+
+  font-size: 16px;
+  font-weight: 650;
+}
+
+
+.account-menu-card p {
+  margin: 0;
+
+  color: #8494a8;
+
+  font-size: 13px;
+
+  line-height: 1.45;
+}
+
+
+/* =====================================================
+   MENU ARROW
+===================================================== */
+
+.account-menu-card > span {
+  color: #64748b;
+
+  font-size: 22px;
+
+  transition:
+    transform 0.2s ease,
+    color 0.2s ease;
+}
+
+
+.account-menu-card:hover > span {
+  color: #60a5fa;
+
+  transform: translateX(4px);
+}
+
+
+/* =====================================================
+   SUPPORT CARD
+===================================================== */
+
+.support-card {
+  border-color: #1d4051;
+}
+
+
+.support-card:hover {
+  border-color: #256d80;
+}
+
+
+/* =====================================================
+   SECURITY CARD
+===================================================== */
+
+.security-card {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 24px 28px;
+
+  background: #0d1b2a;
+
+  border: 1px solid #1e3147;
+
+  border-radius: 14px;
+
+  box-sizing: border-box;
+
+  margin-bottom: 25px;
+}
+
+
+.security-card h2 {
+  margin: 0 0 7px;
+
+  color: #ffffff;
+
+  font-size: 18px;
+}
+
+
+.security-card p {
+  margin: 0;
+
+  color: #8494a8;
+
+  font-size: 13px;
+}
+
+
+.security-card button {
+  border: 1px solid #29435f;
+
+  background: #14263b;
+
+  color: #93c5fd;
+
+  padding: 10px 17px;
+
+  border-radius: 8px;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  white-space: nowrap;
+
+  transition: all 0.25s ease;
+}
+
+
+.security-card button:hover {
+  background: #1b3551;
+
+  border-color: #3b82f6;
+
+  color: #ffffff;
+}
+
+
+/* =====================================================
+   RESET SECTION
+===================================================== */
+
+.reset-section {
+  width: 100%;
+
+  display: flex;
+
+  justify-content: center;
+
+  margin: 25px 0;
+}
+
+
+.reset-demo-button {
+  padding: 11px 20px;
+
+  border-radius: 8px;
+
+  border: 1px solid #735b25;
+
+  background: #241e0e;
+
+  color: #facc15;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+}
+
+
+.reset-demo-button:hover {
+  background: #302710;
+
+  border-color: #eab308;
+
+  transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   LOGOUT SECTION
+===================================================== */
+
+.logout-section {
+  width: 100%;
+
+  display: flex;
+
+  justify-content: center;
+
+  margin: 25px 0 30px;
+}
+
+
+.logout-button {
+  min-width: 150px;
+
+  padding: 12px 25px;
+
+  border-radius: 9px;
+
+  border: 1px solid #6b2931;
+
+  background: #241318;
+
+  color: #f87171;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+}
+
+
+.logout-button:hover {
+  background: #35171d;
+
+  border-color: #ef4444;
+
+  color: #fca5a5;
+
+  transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   DEMO NOTICE
+===================================================== */
+
+.demo-notice {
+  width: 100%;
+
+  padding: 20px 24px;
+
+  background: #0b1725;
+
+  border: 1px solid #1d3044;
+
+  border-radius: 12px;
+
+  box-sizing: border-box;
+
+  text-align: center;
+}
+
+
+.demo-notice strong {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #fbbf24;
+
+  font-size: 14px;
+}
+
+
+.demo-notice p {
+  margin: 0 auto;
+
+  max-width: 700px;
+
+  color: #718096;
+
+  font-size: 12px;
+
+  line-height: 1.6;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+  .account-page {
+    padding: 30px 4% 50px;
+  }
+
+
+  .account-profile-card {
+    gap: 18px;
+
+    padding: 22px;
+  }
+
+
+  .profile-photo-section {
+    min-width: 130px;
+  }
+
+
+  .profile-avatar {
+    width: 90px;
+    height: 90px;
+  }
+
+
+  .profile-information h2 {
+    font-size: 22px;
+  }
+
+
+  .account-menu-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+  .account-page {
+    padding: 22px 16px 40px;
+  }
+
+
+  /* HEADER */
+
+  .account-header {
+    align-items: flex-start;
+
+    gap: 15px;
+  }
+
+
+  .account-header h1 {
+    font-size: 25px;
+  }
+
+
+  .account-header p {
+    font-size: 13px;
+  }
+
+
+  .account-back {
+    padding: 8px 12px;
+
+    font-size: 12px;
+  }
+
+
+  /* PROFILE */
+
+  .account-profile-card {
+    flex-direction: column;
+
+    text-align: center;
+
+    padding: 25px 18px;
+
+    gap: 15px;
+  }
+
+
+  .profile-photo-section {
+    width: 100%;
+
+    min-width: 0;
+  }
+
+
+  .profile-avatar {
+    width: 100px;
+    height: 100px;
+  }
+
+
+  .profile-information {
+    width: 100%;
+  }
+
+
+  .profile-information h2 {
+    font-size: 21px;
+
+    margin-bottom: 8px;
+  }
+
+
+  .profile-email {
+    font-size: 13px;
+  }
+
+
+  .account-status {
+    align-self: center;
+
+    margin-left: 0;
+  }
+
+
+  /* BALANCE */
+
+  .balance-card {
+    padding: 22px;
+  }
+
+
+  .balance-card strong {
+    font-size: 27px;
+  }
+
+
+  /* MENU */
+
+  .account-section > h2 {
+    font-size: 20px;
+  }
+
+
+  .account-menu-card {
+    min-height: 95px;
+
+    padding: 15px;
+
+    gap: 12px;
+  }
+
+
+  .menu-icon {
+    width: 42px;
+    height: 42px;
+
+    min-width: 42px;
+
+    font-size: 19px;
+  }
+
+
+  .account-menu-card h3 {
+    font-size: 14px;
+  }
+
+
+  .account-menu-card p {
+    font-size: 11px;
+  }
+
+
+  .account-menu-card > span {
+    font-size: 18px;
+  }
+
+
+  /* SECURITY */
+
+  .security-card {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    padding: 20px;
+  }
+
+
+  .security-card button {
+    width: 100%;
+  }
+
+
+  /* PHOTO BUTTONS */
+
+  .photo-buttons {
+    flex-wrap: wrap;
+  }
+
+
+  .change-photo-button {
+    font-size: 11px;
+  }
+
+
+  /* DEMO NOTICE */
+
+  .demo-notice {
+    padding: 18px;
+  }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 400px) {
+
+  .account-header {
+    flex-direction: column;
+  }
+
+
+  .account-back {
+    align-self: flex-start;
+  }
+
+
+  .account-profile-card {
+    padding: 20px 14px;
+  }
+
+
+  .balance-card strong {
+    font-size: 24px;
+  }
+
+
+  .account-menu-card {
+    padding: 13px;
+  }
+
+
+  .menu-icon {
+    width: 38px;
+    height: 38px;
+
+    min-width: 38px;
+
+    font-size: 17px;
+  }
+
+}

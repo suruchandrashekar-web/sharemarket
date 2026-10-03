@@ -1,0 +1,641 @@
+
+/* =====================================================
+   SMALL FOOTER
+===================================================== */
+
+.small-footer {
+
+  width: 100%;
+
+  min-height: 200px;
+
+  padding: 25px 45px 15px;
+
+  background: #000000;
+
+  color: #ffffff;
+
+  border-top: 1px solid #222222;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  box-sizing: border-box;
+}
+
+
+/* =====================================================
+   TOP
+===================================================== */
+
+.footer-top {
+
+  max-width: 1400px;
+
+  margin: 0 auto;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 30px;
+}
+
+
+.footer-logo {
+
+  font-size: 28px;
+
+  font-weight: 800;
+
+  letter-spacing: -1px;
+
+  white-space: nowrap;
+}
+
+
+.footer-logo span {
+
+  color: #3b82f6;
+}
+
+
+.footer-top p {
+
+  max-width: 500px;
+
+  margin: 0;
+
+  color: #7f8da1;
+
+  font-size: 12px;
+
+  line-height: 1.5;
+
+  text-align: right;
+}
+
+
+/* =====================================================
+   LINKS
+===================================================== */
+
+.footer-links {
+
+  max-width: 1400px;
+
+  margin: 25px auto 20px;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 8px 25px;
+}
+
+
+.footer-links button {
+
+  border: none;
+
+  outline: none;
+
+  background: transparent;
+
+  color: #8794a8;
+
+  font-size: 11px;
+
+  cursor: pointer;
+
+  padding: 4px 0;
+
+  transition: 0.2s ease;
+}
+
+
+.footer-links button:hover {
+
+  color: #60a5fa;
+
+  transform: translateY(-1px);
+}
+
+
+/* =====================================================
+   BOTTOM
+===================================================== */
+
+.footer-bottom {
+
+  max-width: 1400px;
+
+  margin: 0 auto;
+
+  padding-top: 14px;
+
+  border-top: 1px solid #222222;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+
+.footer-bottom span {
+
+  color: #596678;
+
+  font-size: 10px;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 800px) {
+
+  .small-footer {
+
+    padding: 22px 25px 15px;
+  }
+
+
+  .footer-top {
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+
+    gap: 10px;
+  }
+
+
+  .footer-top p {
+
+    text-align: center;
+  }
+
+
+  .footer-links {
+
+    margin-top: 18px;
+
+    gap: 6px 18px;
+  }
+
+
+  .footer-bottom {
+
+    flex-direction: column;
+
+    gap: 7px;
+
+    text-align: center;
+  }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+  .small-footer {
+
+    min-height: 200px;
+
+    padding: 20px 15px 12px;
+  }
+
+
+  .footer-logo {
+
+    font-size: 24px;
+  }
+
+
+  .footer-top p {
+
+    font-size: 10px;
+
+    max-width: 330px;
+  }
+
+
+  .footer-links {
+
+    margin: 17px auto;
+
+    gap: 5px 15px;
+  }
+
+
+  .footer-links button {
+
+    font-size: 10px;
+  }
+
+
+  .footer-bottom span {
+
+    font-size: 9px;
+  }
+
+}
+
+
+/* =====================================================
+   VERY SMALL MOBILE
+===================================================== */
+
+@media (max-width: 380px) {
+
+  .small-footer {
+
+    padding-left: 12px;
+
+    padding-right: 12px;
+  }
+
+
+  .footer-links {
+
+    gap: 4px 12px;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+/* =====================================================
+   SMALL FOOTER
+===================================================== */
+
+.small-footer {
+
+  width: 100%;
+
+  min-height: 200px;
+
+  padding: 28px 45px 18px;
+
+  background: #000000;
+
+  color: #ffffff;
+
+  border-top: 1px solid #222222;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  box-sizing: border-box;
+}
+
+
+/* =====================================================
+   TOP
+===================================================== */
+
+.footer-top {
+
+  max-width: 1400px;
+
+  margin: 0 auto;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 30px;
+}
+
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.footer-logo {
+
+  font-size: 34px;
+
+  font-weight: 800;
+
+  letter-spacing: -1px;
+
+  white-space: nowrap;
+}
+
+
+.footer-logo span {
+
+  color: #3b82f6;
+}
+
+
+/* =====================================================
+   DESCRIPTION
+===================================================== */
+
+.footer-top p {
+
+  max-width: 600px;
+
+  margin: 0;
+
+  color: #8f9bad;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+
+  text-align: right;
+}
+
+
+/* =====================================================
+   LINKS
+===================================================== */
+
+.footer-links {
+
+  max-width: 1400px;
+
+  margin: 24px auto 22px;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 10px 28px;
+}
+
+
+.footer-links button {
+
+  border: none;
+
+  outline: none;
+
+  background: transparent;
+
+  color: #a0adbd;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  padding: 5px 0;
+
+  transition: 0.2s ease;
+}
+
+
+.footer-links button:hover {
+
+  color: #60a5fa;
+
+  transform: translateY(-1px);
+}
+
+
+/* =====================================================
+   BOTTOM
+===================================================== */
+
+.footer-bottom {
+
+  max-width: 1400px;
+
+  margin: 0 auto;
+
+  padding-top: 15px;
+
+  border-top: 1px solid #222222;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+
+.footer-bottom span {
+
+  color: #6f7d90;
+
+  font-size: 12px;
+
+  font-weight: 500;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 800px) {
+
+  .small-footer {
+
+    padding: 25px 25px 17px;
+  }
+
+
+  .footer-top {
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+
+    gap: 10px;
+  }
+
+
+  .footer-logo {
+
+    font-size: 30px;
+  }
+
+
+  .footer-top p {
+
+    font-size: 13px;
+
+    text-align: center;
+
+    max-width: 600px;
+  }
+
+
+  .footer-links {
+
+    margin-top: 20px;
+
+    gap: 8px 22px;
+  }
+
+
+  .footer-links button {
+
+    font-size: 12px;
+  }
+
+
+  .footer-bottom {
+
+    flex-direction: column;
+
+    gap: 8px;
+
+    text-align: center;
+  }
+
+
+  .footer-bottom span {
+
+    font-size: 11px;
+  }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+  .small-footer {
+
+    min-height: 200px;
+
+    padding: 22px 15px 14px;
+  }
+
+
+  .footer-logo {
+
+    font-size: 27px;
+  }
+
+
+  .footer-top p {
+
+    font-size: 11px;
+
+    line-height: 1.5;
+
+    max-width: 340px;
+  }
+
+
+  .footer-links {
+
+    margin: 18px auto;
+
+    gap: 6px 17px;
+  }
+
+
+  .footer-links button {
+
+    font-size: 11px;
+
+    font-weight: 600;
+  }
+
+
+  .footer-bottom {
+
+    padding-top: 12px;
+
+    gap: 6px;
+  }
+
+
+  .footer-bottom span {
+
+    font-size: 10px;
+  }
+
+}
+
+
+/* =====================================================
+   VERY SMALL MOBILE
+===================================================== */
+
+@media (max-width: 380px) {
+
+  .small-footer {
+
+    padding-left: 12px;
+
+    padding-right: 12px;
+  }
+
+
+  .footer-logo {
+
+    font-size: 25px;
+  }
+
+
+  .footer-top p {
+
+    font-size: 10px;
+  }
+
+
+  .footer-links {
+
+    gap: 5px 13px;
+  }
+
+
+  .footer-links button {
+
+    font-size: 10px;
+  }
+
+
+  .footer-bottom span {
+
+    font-size: 9px;
+  }
+
+}
+

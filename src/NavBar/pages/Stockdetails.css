@@ -1,0 +1,2191 @@
+
+/* =========================================================
+   STOCK DETAILS PAGE
+========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+.details-page {
+  min-height: 100vh;
+  background: #07111f;
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-bottom: 60px;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.details-header {
+  height: 72px;
+  background: #0b1728;
+  border-bottom: 1px solid #1d3047;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 35px;
+
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.details-header h1 {
+  margin: 0;
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+
+/* =========================================================
+   HEADER BUTTONS
+========================================================= */
+
+.back-button,
+.holdings-button {
+  border: none;
+  padding: 11px 18px;
+
+  border-radius: 8px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.25s ease;
+}
+
+.back-button {
+  background: #17263a;
+  color: #ffffff;
+  border: 1px solid #2b415c;
+}
+
+.back-button:hover {
+  background: #223750;
+  transform: translateX(-2px);
+}
+
+.holdings-button {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.holdings-button:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   MAIN CONTAINER
+========================================================= */
+
+.details-container {
+  width: min(1200px, 94%);
+  margin: 30px auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+
+/* =========================================================
+   STOCK INFORMATION
+========================================================= */
+
+.stock-info {
+  background: #0d1b2e;
+
+  border: 1px solid #1c3149;
+
+  border-radius: 16px;
+
+  padding: 28px;
+
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    auto
+    auto
+    auto
+    auto;
+
+  align-items: center;
+
+  gap: 28px;
+
+  box-shadow:
+    0 12px 35px rgba(0, 0, 0, 0.25);
+}
+
+
+/* =========================================================
+   COMPANY SECTION
+========================================================= */
+
+.company-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.big-logo {
+  width: 58px;
+  height: 58px;
+
+  border-radius: 14px;
+
+  background: linear-gradient(
+    135deg,
+    #2563eb,
+    #7c3aed
+  );
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 25px;
+  font-weight: 800;
+
+  box-shadow:
+    0 8px 20px rgba(37, 99, 235, 0.3);
+}
+
+.company-section h2 {
+  margin: 0 0 5px;
+
+  font-size: 24px;
+}
+
+.company-section p {
+  margin: 0;
+
+  color: #8fa4bd;
+
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   WATCHLIST
+========================================================= */
+
+.watchlist-button {
+  border: 1px solid #314861;
+
+  background: #14243a;
+
+  color: #dce7f5;
+
+  padding: 11px 16px;
+
+  border-radius: 9px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  white-space: nowrap;
+
+  transition: 0.25s ease;
+}
+
+.watchlist-button:hover {
+  background: #1d324d;
+
+  border-color: #4b6a8b;
+
+  transform: translateY(-2px);
+}
+
+.watchlist-button.added {
+  background: #172d29;
+
+  border-color: #16a34a;
+
+  color: #4ade80;
+}
+
+
+/* =========================================================
+   CURRENT PRICE
+========================================================= */
+
+.current-price {
+  font-size: 30px;
+
+  font-weight: 800;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   CHANGE
+========================================================= */
+
+.detail-change {
+  font-size: 17px;
+
+  font-weight: 700;
+
+  padding: 8px 12px;
+
+  border-radius: 7px;
+
+  white-space: nowrap;
+}
+
+.detail-change.positive {
+  color: #22c55e;
+
+  background: rgba(
+    34,
+    197,
+    94,
+    0.1
+  );
+}
+
+.detail-change.negative {
+  color: #ef4444;
+
+  background: rgba(
+    239,
+    68,
+    68,
+    0.1
+  );
+}
+
+
+/* =========================================================
+   LIVE STATUS
+========================================================= */
+
+.live-status {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  color: #4ade80;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  white-space: nowrap;
+}
+
+.live-status span {
+  width: 8px;
+  height: 8px;
+
+  background: #22c55e;
+
+  border-radius: 50%;
+
+  box-shadow:
+    0 0 10px #22c55e;
+
+  animation: livePulse 1.2s infinite;
+}
+
+@keyframes livePulse {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.4;
+    transform: scale(0.7);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+/* =========================================================
+   CHART CARD
+========================================================= */
+
+.chart-card {
+  background: #0d1b2e;
+
+  border: 1px solid #1c3149;
+
+  border-radius: 16px;
+
+  padding: 25px;
+
+  box-shadow:
+    0 12px 35px rgba(0, 0, 0, 0.22);
+}
+
+
+/* =========================================================
+   CHART HEADER
+========================================================= */
+
+.chart-header {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: 15px;
+}
+
+.chart-header h2 {
+  margin: 0 0 6px;
+
+  font-size: 21px;
+}
+
+.chart-header p {
+  margin: 0;
+
+  color: #8298b2;
+
+  font-size: 13px;
+}
+
+.chart-live {
+  color: #4ade80;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  background: rgba(
+    34,
+    197,
+    94,
+    0.1
+  );
+
+  padding: 7px 11px;
+
+  border-radius: 7px;
+}
+
+
+/* =========================================================
+   CHART
+========================================================= */
+
+.chart {
+  width: 100%;
+
+  height: 450px;
+
+  margin-top: 10px;
+}
+
+
+/* Recharts text */
+
+.chart text {
+  fill: #8fa4bd;
+}
+
+.chart .recharts-cartesian-grid line {
+  stroke: #1d3047;
+}
+
+.chart .recharts-tooltip-wrapper {
+  outline: none;
+}
+
+
+/* =========================================================
+   TIME BUTTONS
+========================================================= */
+
+.time-buttons {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 8px;
+
+  margin-top: 18px;
+
+  flex-wrap: wrap;
+}
+
+.time-buttons button {
+  min-width: 58px;
+
+  border: 1px solid #2b415c;
+
+  background: #111f33;
+
+  color: #8fa4bd;
+
+  padding: 9px 14px;
+
+  border-radius: 7px;
+
+  cursor: pointer;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  transition: 0.2s ease;
+}
+
+.time-buttons button:hover {
+  color: #ffffff;
+
+  border-color: #3b82f6;
+
+  background: #172b46;
+}
+
+.time-buttons button.active {
+  background: #2563eb;
+
+  color: #ffffff;
+
+  border-color: #2563eb;
+
+  box-shadow:
+    0 5px 15px rgba(
+      37,
+      99,
+      235,
+      0.25
+    );
+}
+
+
+/* =========================================================
+   TRADE CARD
+========================================================= */
+
+.trade-card {
+  background: #0d1b2e;
+
+  border: 1px solid #1c3149;
+
+  border-radius: 16px;
+
+  padding: 25px;
+
+  box-shadow:
+    0 12px 35px rgba(0, 0, 0, 0.22);
+}
+
+.trade-title h2 {
+  margin: 0 0 6px;
+
+  font-size: 21px;
+}
+
+.trade-title p {
+  margin: 0;
+
+  color: #8298b2;
+
+  font-size: 13px;
+}
+
+
+/* =========================================================
+   TRADE CONTENT
+========================================================= */
+
+.trade-content {
+  margin-top: 22px;
+
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    1fr
+    1fr
+    auto;
+
+  align-items: end;
+
+  gap: 18px;
+}
+
+
+/* =========================================================
+   QUANTITY
+========================================================= */
+
+.quantity-box {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+.quantity-box label {
+  color: #8fa4bd;
+
+  font-size: 13px;
+
+  font-weight: 600;
+}
+
+.quantity-box input {
+  width: 100%;
+
+  height: 45px;
+
+  background: #101f33;
+
+  border: 1px solid #2a4059;
+
+  border-radius: 8px;
+
+  color: #ffffff;
+
+  padding: 0 13px;
+
+  font-size: 15px;
+
+  outline: none;
+
+  transition: 0.2s;
+}
+
+.quantity-box input:focus {
+  border-color: #3b82f6;
+
+  box-shadow:
+    0 0 0 3px rgba(
+      59,
+      130,
+      246,
+      0.12
+    );
+}
+
+
+/* =========================================================
+   TOTAL BOX
+========================================================= */
+
+.total-box {
+  background: #101f33;
+
+  border: 1px solid #213850;
+
+  border-radius: 9px;
+
+  min-height: 45px;
+
+  padding: 9px 13px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+}
+
+.total-box span {
+  color: #8298b2;
+
+  font-size: 11px;
+
+  margin-bottom: 3px;
+}
+
+.total-box strong {
+  color: #ffffff;
+
+  font-size: 16px;
+}
+
+
+/* =========================================================
+   BUY / SELL BUTTONS
+========================================================= */
+
+.trade-buttons {
+  display: flex;
+
+  gap: 10px;
+}
+
+.buy-button,
+.sell-button {
+  height: 45px;
+
+  min-width: 100px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  color: #ffffff;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.25s ease;
+}
+
+.buy-button {
+  background: #16a34a;
+}
+
+.buy-button:hover {
+  background: #15803d;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 18px rgba(
+      22,
+      163,
+      74,
+      0.25
+    );
+}
+
+.sell-button {
+  background: #dc2626;
+}
+
+.sell-button:hover {
+  background: #b91c1c;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 18px rgba(
+      220,
+      38,
+      38,
+      0.25
+    );
+}
+
+
+/* =========================================================
+   STATISTICS
+========================================================= */
+
+.statistics {
+  background: #0d1b2e;
+
+  border: 1px solid #1c3149;
+
+  border-radius: 16px;
+
+  padding: 25px;
+
+  box-shadow:
+    0 12px 35px rgba(0, 0, 0, 0.22);
+}
+
+.statistics h2 {
+  margin: 0 0 20px;
+
+  font-size: 21px;
+}
+
+
+/* =========================================================
+   STATS GRID
+========================================================= */
+
+.stats-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 15px;
+}
+
+.stats-grid > div {
+  background: #101f33;
+
+  border: 1px solid #213850;
+
+  border-radius: 10px;
+
+  padding: 18px;
+}
+
+.stats-grid span {
+  display: block;
+
+  color: #8298b2;
+
+  font-size: 12px;
+
+  margin-bottom: 8px;
+}
+
+.stats-grid strong {
+  font-size: 18px;
+}
+
+.stats-grid .positive {
+  color: #22c55e;
+}
+
+.stats-grid .negative {
+  color: #ef4444;
+}
+
+
+/* =========================================================
+   ORDER OVERLAY
+========================================================= */
+
+.order-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  background: rgba(
+    2,
+    8,
+    20,
+    0.78
+  );
+
+  backdrop-filter: blur(7px);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 20px;
+
+  z-index: 1000;
+
+  animation: overlayFade 0.2s ease;
+}
+
+@keyframes overlayFade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+/* =========================================================
+   ORDER POPUP
+========================================================= */
+
+.order-popup {
+  width: min(470px, 100%);
+
+  background: #0d1b2e;
+
+  border: 1px solid #2a4059;
+
+  border-radius: 18px;
+
+  padding: 30px;
+
+  position: relative;
+
+  box-shadow:
+    0 25px 70px rgba(
+      0,
+      0,
+      0,
+      0.55
+    );
+
+  animation: popupShow 0.25s ease;
+}
+
+@keyframes popupShow {
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(20px)
+      scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0)
+      scale(1);
+  }
+}
+
+
+/* =========================================================
+   POPUP CLOSE
+========================================================= */
+
+.popup-close {
+  position: absolute;
+
+  right: 17px;
+
+  top: 15px;
+
+  width: 34px;
+
+  height: 34px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: #17263a;
+
+  color: #a9bad0;
+
+  cursor: pointer;
+
+  font-size: 16px;
+
+  transition: 0.2s;
+}
+
+.popup-close:hover {
+  background: #dc2626;
+
+  color: #ffffff;
+
+  transform: rotate(90deg);
+}
+
+
+/* =========================================================
+   POPUP TITLE
+========================================================= */
+
+.order-popup h2 {
+  margin: 0 0 8px;
+
+  font-size: 23px;
+}
+
+.popup-subtitle {
+  margin: 0 0 22px;
+
+  color: #8298b2;
+
+  font-size: 13px;
+}
+
+
+/* =========================================================
+   TRADE MODE OPTIONS
+========================================================= */
+
+.trade-mode-options {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 13px;
+}
+
+.mode-card {
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  text-align: left;
+
+  padding: 17px;
+
+  border-radius: 12px;
+
+  cursor: pointer;
+
+  background: #101f33;
+
+  border: 1px solid #263d56;
+
+  color: #ffffff;
+
+  transition: 0.25s ease;
+}
+
+.mode-card:hover {
+  transform: translateY(-2px);
+
+  border-color: #3b82f6;
+
+  background: #142944;
+
+  box-shadow:
+    0 8px 20px rgba(
+      0,
+      0,
+      0,
+      0.2
+    );
+}
+
+.mode-icon {
+  width: 46px;
+
+  height: 46px;
+
+  flex-shrink: 0;
+
+  border-radius: 10px;
+
+  background: #172b46;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 22px;
+}
+
+.mode-card h3 {
+  margin: 0 0 5px;
+
+  font-size: 16px;
+}
+
+.mode-card p {
+  margin: 0;
+
+  color: #8298b2;
+
+  font-size: 12px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   INTRADAY CARD
+========================================================= */
+
+.intraday-card:hover {
+  border-color: #f59e0b;
+}
+
+.intraday-card .mode-icon {
+  background: rgba(
+    245,
+    158,
+    11,
+    0.12
+  );
+}
+
+
+/* =========================================================
+   HOLDING CARD
+========================================================= */
+
+.holding-card:hover {
+  border-color: #2563eb;
+}
+
+.holding-card .mode-icon {
+  background: rgba(
+    37,
+    99,
+    235,
+    0.12
+  );
+}
+
+
+/* =========================================================
+   SELECTED MODE
+========================================================= */
+
+.selected-mode {
+  display: inline-block;
+
+  margin: 10px 0 20px;
+
+  padding: 8px 12px;
+
+  border-radius: 7px;
+
+  background: #172b46;
+
+  color: #60a5fa;
+
+  font-size: 12px;
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   POPUP ROW
+========================================================= */
+
+.popup-row {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: 13px 0;
+
+  border-bottom: 1px solid #1d3047;
+}
+
+.popup-row span {
+  color: #8298b2;
+
+  font-size: 13px;
+}
+
+.popup-row strong {
+  color: #ffffff;
+
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   POPUP TOTAL
+========================================================= */
+
+.popup-total {
+  margin-top: 18px;
+
+  padding: 15px;
+
+  border-radius: 10px;
+
+  background: #101f33;
+
+  border: 1px solid #263d56;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+}
+
+.popup-total span {
+  color: #8298b2;
+
+  font-size: 13px;
+}
+
+.popup-total strong {
+  color: #ffffff;
+
+  font-size: 20px;
+}
+
+
+/* =========================================================
+   CONFIRM BUY
+========================================================= */
+
+.confirm-buy,
+.confirm-sell {
+  width: 100%;
+
+  height: 48px;
+
+  margin-top: 18px;
+
+  border: none;
+
+  border-radius: 9px;
+
+  color: #ffffff;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.25s ease;
+}
+
+.confirm-buy {
+  background: #16a34a;
+}
+
+.confirm-buy:hover {
+  background: #15803d;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 20px rgba(
+      22,
+      163,
+      74,
+      0.25
+    );
+}
+
+.confirm-sell {
+  background: #dc2626;
+}
+
+.confirm-sell:hover {
+  background: #b91c1c;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 20px rgba(
+      220,
+      38,
+      38,
+      0.25
+    );
+}
+
+
+/* =========================================================
+   CHANGE ORDER TYPE
+========================================================= */
+
+.change-mode-button {
+  width: 100%;
+
+  margin-top: 10px;
+
+  height: 42px;
+
+  border: 1px solid #2b415c;
+
+  background: #14243a;
+
+  color: #a9bad0;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  transition: 0.2s;
+}
+
+.change-mode-button:hover {
+  background: #1d324d;
+
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.loading {
+  min-height: 100vh;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: #07111f;
+
+  color: #60a5fa;
+
+  font-size: 20px;
+
+  font-weight: 700;
+}
+
+.loading::after {
+  content: "";
+
+  width: 18px;
+
+  height: 18px;
+
+  margin-left: 10px;
+
+  border: 3px solid #263d56;
+
+  border-top-color: #3b82f6;
+
+  border-radius: 50%;
+
+  animation: loadingSpin 0.8s linear infinite;
+}
+
+@keyframes loadingSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .stock-info {
+    grid-template-columns:
+      1fr
+      auto
+      auto;
+
+    gap: 18px;
+  }
+
+  .company-section {
+    grid-column: 1 / -1;
+  }
+
+  .trade-content {
+    grid-template-columns:
+      1fr 1fr;
+
+    align-items: stretch;
+  }
+
+  .trade-buttons {
+    grid-column: 1 / -1;
+  }
+
+  .buy-button,
+  .sell-button {
+    flex: 1;
+  }
+
+  .stats-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+  .details-header {
+    height: auto;
+
+    min-height: 65px;
+
+    padding: 12px 15px;
+
+    gap: 10px;
+  }
+
+  .details-header h1 {
+    font-size: 18px;
+
+    text-align: center;
+  }
+
+  .back-button,
+  .holdings-button {
+    padding: 9px 11px;
+
+    font-size: 12px;
+  }
+
+  .details-container {
+    width: 94%;
+
+    margin: 18px auto;
+
+    gap: 18px;
+  }
+
+  .stock-info {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    padding: 20px;
+
+    gap: 14px;
+  }
+
+  .company-section {
+    justify-content: flex-start;
+  }
+
+  .watchlist-button {
+    width: 100%;
+  }
+
+  .current-price {
+    font-size: 28px;
+  }
+
+  .detail-change {
+    align-self: flex-start;
+  }
+
+  .live-status {
+    align-self: flex-start;
+  }
+
+  .chart-card,
+  .trade-card,
+  .statistics {
+    padding: 18px;
+  }
+
+  .chart {
+    height: 330px;
+  }
+
+  .chart-header {
+    align-items: flex-start;
+
+    gap: 10px;
+  }
+
+  .chart-header h2 {
+    font-size: 18px;
+  }
+
+  .chart-live {
+    font-size: 11px;
+
+    padding: 6px 8px;
+  }
+
+  .time-buttons {
+    gap: 5px;
+  }
+
+  .time-buttons button {
+    min-width: 48px;
+
+    padding: 8px 9px;
+
+    font-size: 12px;
+  }
+
+  .trade-content {
+    grid-template-columns: 1fr;
+
+    gap: 13px;
+  }
+
+  .trade-buttons {
+    grid-column: auto;
+
+    width: 100%;
+  }
+
+  .buy-button,
+  .sell-button {
+    width: 50%;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .order-popup {
+    padding: 23px;
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .details-header h1 {
+    font-size: 16px;
+  }
+
+  .back-button,
+  .holdings-button {
+    padding: 8px;
+
+    font-size: 11px;
+  }
+
+  .big-logo {
+    width: 50px;
+
+    height: 50px;
+
+    font-size: 21px;
+  }
+
+  .company-section h2 {
+    font-size: 20px;
+  }
+
+  .current-price {
+    font-size: 25px;
+  }
+
+  .order-popup h2 {
+    font-size: 20px;
+  }
+
+  .mode-card {
+    padding: 13px;
+  }
+
+  .mode-icon {
+    width: 40px;
+
+    height: 40px;
+
+    font-size: 19px;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   BUY / SELL OVERLAY
+========================================================= */
+
+.order-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  background: rgba(2, 8, 20, 0.82);
+  backdrop-filter: blur(10px);
+
+  animation: overlayFade 0.25s ease;
+}
+
+@keyframes overlayFade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+/* =========================================================
+   ORDER POPUP
+========================================================= */
+
+.order-popup {
+  width: min(500px, 100%);
+
+  max-height: 90vh;
+  overflow-y: auto;
+
+  position: relative;
+
+  padding: 32px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #0f2035,
+      #0a1728
+    );
+
+  border: 1px solid #29445f;
+
+  border-radius: 22px;
+
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.65),
+    0 0 0 1px rgba(255, 255, 255, 0.02);
+
+  animation: popupShow 0.3s ease;
+}
+
+@keyframes popupShow {
+  from {
+    opacity: 0;
+    transform: translateY(25px) scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+
+/* =========================================================
+   POPUP CLOSE BUTTON
+========================================================= */
+
+.popup-close {
+  position: absolute;
+
+  top: 18px;
+  right: 18px;
+
+  width: 36px;
+  height: 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #29445f;
+  border-radius: 50%;
+
+  background: #14263c;
+
+  color: #9db0c7;
+
+  font-size: 15px;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+}
+
+.popup-close:hover {
+  background: #dc2626;
+  border-color: #ef4444;
+
+  color: white;
+
+  transform: rotate(90deg);
+}
+
+
+/* =========================================================
+   POPUP TITLE
+========================================================= */
+
+.order-popup h2 {
+  margin: 0;
+
+  padding-right: 45px;
+
+  font-size: 25px;
+  font-weight: 800;
+
+  color: #ffffff;
+
+  letter-spacing: -0.3px;
+}
+
+
+/* =========================================================
+   SUBTITLE
+========================================================= */
+
+.popup-subtitle {
+  margin: 8px 0 25px;
+
+  color: #8196ae;
+
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   BUY MODE OPTIONS
+========================================================= */
+
+.trade-mode-options {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 15px;
+
+  margin-top: 22px;
+}
+
+
+/* =========================================================
+   MODE CARD
+========================================================= */
+
+.mode-card {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  gap: 17px;
+
+  padding: 19px;
+
+  text-align: left;
+
+  background:
+    linear-gradient(
+      135deg,
+      #13263d,
+      #0e1d30
+    );
+
+  border: 1px solid #28415b;
+
+  border-radius: 15px;
+
+  color: white;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.mode-card:hover {
+  transform: translateY(-3px);
+
+  background:
+    linear-gradient(
+      135deg,
+      #193452,
+      #12263e
+    );
+
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+
+/* =========================================================
+   MODE ICON
+========================================================= */
+
+.mode-icon {
+  width: 52px;
+  height: 52px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 13px;
+
+  font-size: 25px;
+
+  transition: transform 0.25s ease;
+}
+
+.mode-card:hover .mode-icon {
+  transform: scale(1.08);
+}
+
+
+/* =========================================================
+   INTRADAY
+========================================================= */
+
+.intraday-card {
+  border-color: #594519;
+}
+
+.intraday-card:hover {
+  border-color: #f59e0b;
+
+  box-shadow:
+    0 12px 30px rgba(245, 158, 11, 0.12);
+}
+
+.intraday-card .mode-icon {
+  background: rgba(245, 158, 11, 0.14);
+
+  color: #fbbf24;
+}
+
+
+/* =========================================================
+   HOLDING
+========================================================= */
+
+.holding-card {
+  border-color: #253f62;
+}
+
+.holding-card:hover {
+  border-color: #3b82f6;
+
+  box-shadow:
+    0 12px 30px rgba(59, 130, 246, 0.14);
+}
+
+.holding-card .mode-icon {
+  background: rgba(59, 130, 246, 0.14);
+
+  color: #60a5fa;
+}
+
+
+/* =========================================================
+   MODE TEXT
+========================================================= */
+
+.mode-card h3 {
+  margin: 0 0 6px;
+
+  font-size: 17px;
+
+  font-weight: 750;
+}
+
+.mode-card p {
+  margin: 0;
+
+  color: #8298b2;
+
+  font-size: 12px;
+
+  line-height: 1.55;
+}
+
+
+/* =========================================================
+   SELECTED MODE
+========================================================= */
+
+.selected-mode {
+  display: inline-flex;
+
+  align-items: center;
+
+  margin: 14px 0 18px;
+
+  padding: 8px 13px;
+
+  background: rgba(59, 130, 246, 0.12);
+
+  border: 1px solid rgba(59, 130, 246, 0.25);
+
+  border-radius: 8px;
+
+  color: #60a5fa;
+
+  font-size: 12px;
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   POPUP ROW
+========================================================= */
+
+.popup-row {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  min-height: 48px;
+
+  border-bottom: 1px solid #20364e;
+}
+
+.popup-row span {
+  color: #8196ae;
+
+  font-size: 13px;
+}
+
+.popup-row strong {
+  color: #ffffff;
+
+  font-size: 15px;
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   POPUP TOTAL
+========================================================= */
+
+.popup-total {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 20px;
+
+  padding: 17px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #142941,
+      #102137
+    );
+
+  border: 1px solid #2b4662;
+
+  border-radius: 12px;
+}
+
+.popup-total span {
+  color: #9aadc2;
+
+  font-size: 14px;
+}
+
+.popup-total strong {
+  color: #ffffff;
+
+  font-size: 22px;
+
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   CONFIRM BUY / SELL
+========================================================= */
+
+.confirm-buy,
+.confirm-sell {
+  width: 100%;
+
+  height: 50px;
+
+  margin-top: 18px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  color: #ffffff;
+
+  font-size: 15px;
+
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+}
+
+
+/* =========================================================
+   CONFIRM BUY
+========================================================= */
+
+.confirm-buy {
+  background:
+    linear-gradient(
+      135deg,
+      #16a34a,
+      #15803d
+    );
+
+  box-shadow:
+    0 8px 20px rgba(22, 163, 74, 0.18);
+}
+
+.confirm-buy:hover {
+  background:
+    linear-gradient(
+      135deg,
+      #22c55e,
+      #16a34a
+    );
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 12px 25px rgba(22, 163, 74, 0.28);
+}
+
+.confirm-buy:active {
+  transform: translateY(0);
+}
+
+
+/* =========================================================
+   CONFIRM SELL
+========================================================= */
+
+.confirm-sell {
+  background:
+    linear-gradient(
+      135deg,
+      #dc2626,
+      #b91c1c
+    );
+
+  box-shadow:
+    0 8px 20px rgba(220, 38, 38, 0.18);
+}
+
+.confirm-sell:hover {
+  background:
+    linear-gradient(
+      135deg,
+      #ef4444,
+      #dc2626
+    );
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 12px 25px rgba(220, 38, 38, 0.28);
+}
+
+
+/* =========================================================
+   CHANGE ORDER TYPE
+========================================================= */
+
+.change-mode-button {
+  width: 100%;
+
+  height: 43px;
+
+  margin-top: 10px;
+
+  border: 1px solid #29445f;
+
+  border-radius: 9px;
+
+  background: #14263c;
+
+  color: #9db0c7;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.change-mode-button:hover {
+  background: #1b334e;
+
+  border-color: #3d5d7c;
+
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   POPUP SCROLLBAR
+========================================================= */
+
+.order-popup::-webkit-scrollbar {
+  width: 6px;
+}
+
+.order-popup::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.order-popup::-webkit-scrollbar-thumb {
+  background: #29445f;
+
+  border-radius: 10px;
+}
+
+
+/* =========================================================
+   MOBILE POPUP
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .order-overlay {
+    padding: 15px;
+  }
+
+  .order-popup {
+    width: 100%;
+
+    padding: 24px;
+
+    border-radius: 18px;
+
+    max-height: 92vh;
+  }
+
+  .order-popup h2 {
+    font-size: 21px;
+  }
+
+  .popup-subtitle {
+    font-size: 13px;
+
+    margin-bottom: 20px;
+  }
+
+  .mode-card {
+    padding: 15px;
+
+    gap: 13px;
+  }
+
+  .mode-icon {
+    width: 45px;
+    height: 45px;
+
+    font-size: 21px;
+  }
+
+  .mode-card h3 {
+    font-size: 15px;
+  }
+
+  .mode-card p {
+    font-size: 11px;
+  }
+
+  .popup-total {
+    padding: 15px;
+  }
+
+  .popup-total strong {
+    font-size: 19px;
+  }
+
+  .confirm-buy,
+  .confirm-sell {
+    height: 48px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .order-popup {
+    padding: 20px;
+  }
+
+  .popup-close {
+    top: 13px;
+    right: 13px;
+
+    width: 32px;
+    height: 32px;
+  }
+
+  .order-popup h2 {
+    font-size: 19px;
+  }
+
+  .mode-card {
+    padding: 13px;
+  }
+
+  .mode-icon {
+    width: 40px;
+    height: 40px;
+
+    font-size: 19px;
+  }
+
+  .popup-row {
+    min-height: 44px;
+  }
+
+  .popup-total strong {
+    font-size: 18px;
+  }
+}
+

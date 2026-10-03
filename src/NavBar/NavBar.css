@@ -1,0 +1,429 @@
+
+/* ========================================
+   GLOBAL PAGE BACKGROUND
+======================================== */
+
+body {
+  margin: 0;
+  padding: 0;
+
+  background: #121212;
+  color: #ffffff;
+
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* ========================================
+   NAVBAR
+======================================== */
+
+.navbar {
+  width: 100%;
+  min-height: 70px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 35px;
+
+  background: #121212;
+  border-bottom: 1px solid #292929;
+
+  box-sizing: border-box;
+
+  position: sticky;
+  top: 0;
+
+  z-index: 1000;
+}
+
+
+/* ========================================
+   LEFT
+======================================== */
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+
+  gap: 28px;
+  min-width: 390px;
+}
+
+
+/* ========================================
+   LOGO
+======================================== */
+
+.logo {
+  margin: 0;
+
+  font-size: 28px;
+  font-weight: 800;
+
+  color: #00d09c;
+}
+
+
+/* ========================================
+   NAV LINKS
+======================================== */
+
+.navbar-left a,
+.navbar-right a {
+  text-decoration: none;
+
+  color: #eeeeee;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  transition: 0.2s;
+}
+
+
+.navbar-left a:hover,
+.navbar-right a:hover {
+  color: #00d09c;
+}
+
+
+/* ========================================
+   CENTER
+======================================== */
+
+.navbar-center {
+  flex: 1;
+
+  display: flex;
+  justify-content: center;
+
+  position: relative;
+}
+
+
+/* ========================================
+   SEARCH CONTAINER
+======================================== */
+
+.search-container {
+  width: 100%;
+  max-width: 500px;
+
+  position: relative;
+}
+
+
+/* ========================================
+   SEARCH INPUT
+======================================== */
+
+.search-container input {
+  width: 100%;
+  height: 44px;
+
+  padding: 0 18px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #333333;
+  border-radius: 10px;
+
+  outline: none;
+
+  background: #1b1b1b;
+
+  font-size: 14px;
+
+  color: #ffffff;
+
+  transition: 0.2s;
+}
+
+
+.search-container input:focus {
+  background: #181818;
+
+  border-color: #00d09c;
+
+  box-shadow:
+    0 0 0 3px rgba(0, 208, 156, 0.12);
+}
+
+
+.search-container input::placeholder {
+  color: #888888;
+}
+
+
+/* ========================================
+   SEARCH RESULTS
+======================================== */
+
+.search-results {
+  position: absolute;
+
+  top: 52px;
+  left: 0;
+
+  width: 100%;
+
+  background: #181818;
+
+  border: 1px solid #303030;
+
+  border-radius: 12px;
+
+  box-shadow:
+    0 12px 35px rgba(0, 0, 0, 0.6);
+
+  overflow: hidden;
+
+  z-index: 2000;
+}
+
+
+/* ========================================
+   RESULT ITEM
+======================================== */
+
+.search-result-item {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  padding: 13px 16px;
+
+  cursor: pointer;
+
+  background: #181818;
+
+  border-bottom: 1px solid #292929;
+
+  transition: 0.2s;
+}
+
+
+.search-result-item:last-child {
+  border-bottom: none;
+}
+
+
+.search-result-item:hover {
+  background: #202c28;
+}
+
+
+/* ========================================
+   RESULT LOGO
+======================================== */
+
+.search-logo {
+  width: 38px;
+  height: 38px;
+
+  min-width: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #153d32;
+
+  color: #00d09c;
+
+  font-size: 15px;
+  font-weight: 800;
+}
+
+
+/* ========================================
+   RESULT INFO
+======================================== */
+
+.search-info {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+
+.search-info strong {
+  font-size: 14px;
+
+  color: #ffffff;
+
+  font-weight: 600;
+}
+
+
+.search-info span {
+  font-size: 12px;
+
+  color: #888888;
+}
+
+
+/* ========================================
+   STOCK / MUTUAL FUND LABEL
+======================================== */
+
+.search-result-item small {
+  font-size: 11px;
+
+  color: #bbbbbb;
+
+  background: #282828;
+
+  padding: 5px 8px;
+
+  border-radius: 6px;
+}
+
+
+/* ========================================
+   NO RESULT
+======================================== */
+
+.no-result {
+  padding: 20px;
+
+  text-align: center;
+
+  background: #181818;
+
+  color: #888888;
+
+  font-size: 14px;
+}
+
+
+/* ========================================
+   PROFILE
+======================================== */
+
+.profile {
+  width: 40px;
+  height: 40px;
+
+  margin-left: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #202020;
+
+  border: 1px solid #333333;
+
+  cursor: pointer;
+
+  font-size: 20px;
+
+  transition: 0.2s;
+}
+
+
+.profile:hover {
+  background: #153d32;
+
+  border-color: #00d09c;
+}
+
+
+/* ========================================
+   RIGHT
+======================================== */
+
+.navbar-right {
+  display: flex;
+
+  align-items: center;
+
+  gap: 22px;
+
+  min-width: 350px;
+
+  justify-content: flex-end;
+}
+
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 1000px) {
+
+  .navbar {
+    padding: 0 20px;
+  }
+
+  .navbar-left {
+    min-width: auto;
+    gap: 15px;
+  }
+
+  .navbar-right {
+    min-width: auto;
+    gap: 12px;
+  }
+
+  .navbar-left a {
+    display: none;
+  }
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 700px) {
+
+  .navbar {
+    height: auto;
+
+    min-height: 70px;
+
+    flex-wrap: wrap;
+
+    padding: 12px 15px;
+
+    gap: 10px;
+  }
+
+  .navbar-left {
+    min-width: auto;
+  }
+
+  .navbar-center {
+    order: 3;
+
+    width: 100%;
+  }
+
+  .navbar-right {
+    margin-left: auto;
+
+    min-width: auto;
+  }
+
+  .navbar-right a {
+    display: none;
+  }
+
+  .search-container {
+    max-width: 100%;
+  }
+}
+

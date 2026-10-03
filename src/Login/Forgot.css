@@ -1,0 +1,542 @@
+
+/* =====================================================
+   FORGOT PASSWORD PAGE
+   TradeX Dark Blue + Green Theme
+===================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* =====================================================
+   PAGE
+===================================================== */
+
+.forgot-page {
+
+  min-height: 100vh;
+
+  width: 100%;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  padding: 40px 20px;
+
+  background:
+    radial-gradient(
+      circle at top,
+      #10243a 0%,
+      #07111f 40%,
+      #030912 100%
+    );
+
+  box-sizing: border-box;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  color: #ffffff;
+
+}
+
+
+/* =====================================================
+   FORGOT CARD
+===================================================== */
+
+.forgot-card {
+
+  width: 100%;
+
+  max-width: 430px;
+
+  padding: 40px 38px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #0d1b2a,
+      #07111f
+    );
+
+  border: 1px solid #1e344b;
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 25px 70px rgba(0, 0, 0, 0.55),
+    inset 0 1px 0 rgba(255, 255, 255, 0.03);
+
+  box-sizing: border-box;
+
+}
+
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.forgot-logo {
+
+  text-align: center;
+
+  font-size: 32px;
+
+  font-weight: 800;
+
+  letter-spacing: 1px;
+
+  color: #ffffff;
+
+  margin-bottom: 22px;
+
+}
+
+
+.forgot-logo span {
+
+  color: #00d084;
+
+}
+
+
+/* =====================================================
+   TITLE
+===================================================== */
+
+.forgot-card h1 {
+
+  margin: 0;
+
+  text-align: center;
+
+  font-size: 28px;
+
+  font-weight: 700;
+
+  color: #ffffff;
+
+}
+
+
+/* =====================================================
+   SUBTITLE
+===================================================== */
+
+.forgot-subtitle {
+
+  margin: 9px 0 30px;
+
+  text-align: center;
+
+  color: #8fa4b8;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+
+}
+
+
+/* =====================================================
+   INPUT GROUP
+===================================================== */
+
+.forgot-input-group {
+
+  width: 100%;
+
+  margin-bottom: 20px;
+
+}
+
+
+/* =====================================================
+   LABEL
+===================================================== */
+
+.forgot-input-group label {
+
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #dce7f1;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+}
+
+
+/* =====================================================
+   EMAIL INPUT
+===================================================== */
+
+.forgot-input-group input {
+
+  width: 100%;
+
+  height: 50px;
+
+  padding: 0 15px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #29445d;
+
+  border-radius: 9px;
+
+  outline: none;
+
+  background: #0a1725;
+
+  color: #ffffff;
+
+  font-size: 14px;
+
+  transition:
+    all 0.25s ease;
+
+}
+
+
+/* =====================================================
+   PLACEHOLDER
+===================================================== */
+
+.forgot-input-group input::placeholder {
+
+  color: #64798d;
+
+}
+
+
+/* =====================================================
+   INPUT FOCUS
+===================================================== */
+
+.forgot-input-group input:focus {
+
+  border-color: #00d084;
+
+  box-shadow:
+    0 0 0 3px rgba(0, 208, 132, 0.10);
+
+  background: #0b1928;
+
+}
+
+
+/* =====================================================
+   DISABLED INPUT
+===================================================== */
+
+.forgot-input-group input:disabled {
+
+  opacity: 0.6;
+
+  cursor: not-allowed;
+
+}
+
+
+/* =====================================================
+   SEND OTP BUTTON
+===================================================== */
+
+.forgot-reset-button {
+
+  width: 100%;
+
+  height: 50px;
+
+  border: none;
+
+  border-radius: 9px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #00d084,
+      #00b875
+    );
+
+  color: #03110b;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease;
+
+}
+
+
+/* =====================================================
+   SEND OTP HOVER
+===================================================== */
+
+.forgot-reset-button:hover {
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 8px 25px rgba(0, 208, 132, 0.25);
+
+}
+
+
+/* =====================================================
+   SEND OTP ACTIVE
+===================================================== */
+
+.forgot-reset-button:active {
+
+  transform: translateY(0);
+
+}
+
+
+/* =====================================================
+   SEND OTP DISABLED
+===================================================== */
+
+.forgot-reset-button:disabled {
+
+  opacity: 0.6;
+
+  cursor: not-allowed;
+
+  transform: none;
+
+  box-shadow: none;
+
+}
+
+
+/* =====================================================
+   BACK TO LOGIN
+===================================================== */
+
+.back-login-button {
+
+  width: 100%;
+
+  margin-top: 18px;
+
+  padding: 12px;
+
+  border: none;
+
+  background: transparent;
+
+  color: #00d084;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    color 0.2s ease;
+
+}
+
+
+/* =====================================================
+   BACK BUTTON HOVER
+===================================================== */
+
+.back-login-button:hover {
+
+  color: #20e69a;
+
+  text-decoration: underline;
+
+}
+
+
+/* =====================================================
+   BACK BUTTON DISABLED
+===================================================== */
+
+.back-login-button:disabled {
+
+  opacity: 0.5;
+
+  cursor: not-allowed;
+
+}
+
+
+/* =====================================================
+   MESSAGE
+===================================================== */
+
+.forgot-message {
+
+  width: 100%;
+
+  margin-bottom: 20px;
+
+  padding: 12px 14px;
+
+  border-radius: 8px;
+
+  border: 1px solid #29445d;
+
+  background: #0a1725;
+
+  color: #8fa4b8;
+
+  font-size: 13px;
+
+  line-height: 1.5;
+
+  text-align: left;
+
+}
+
+
+/* =====================================================
+   SUCCESS MESSAGE
+===================================================== */
+
+.forgot-message.success {
+
+  border-color: #00d084;
+
+  color: #00d084;
+
+  background: rgba(0, 208, 132, 0.05);
+
+}
+
+
+/* =====================================================
+   DEMO TEXT
+===================================================== */
+
+.forgot-demo {
+
+  margin: 25px 0 0;
+
+  padding-top: 20px;
+
+  border-top: 1px solid #1e344b;
+
+  text-align: center;
+
+  color: #526a7f;
+
+  font-size: 12px;
+
+  letter-spacing: 0.5px;
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 500px) {
+
+  .forgot-page {
+
+    padding: 20px 15px;
+
+  }
+
+
+  .forgot-card {
+
+    padding: 32px 22px;
+
+    border-radius: 15px;
+
+  }
+
+
+  .forgot-logo {
+
+    font-size: 29px;
+
+  }
+
+
+  .forgot-card h1 {
+
+    font-size: 25px;
+
+  }
+
+
+  .forgot-subtitle {
+
+    font-size: 13px;
+
+  }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 360px) {
+
+  .forgot-card {
+
+    padding: 28px 18px;
+
+  }
+
+
+  .forgot-logo {
+
+    font-size: 27px;
+
+  }
+
+
+  .forgot-card h1 {
+
+    font-size: 23px;
+
+  }
+
+
+  .forgot-input-group input {
+
+    height: 48px;
+
+  }
+
+
+  .forgot-reset-button {
+
+    height: 48px;
+
+  }
+
+}
+

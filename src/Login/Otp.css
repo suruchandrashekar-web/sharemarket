@@ -1,0 +1,487 @@
+
+/* =====================================================
+   TRADEX - OTP VERIFICATION PAGE
+===================================================== */
+
+.otp-page {
+  min-height: 100vh;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 30px 20px;
+
+  box-sizing: border-box;
+
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(0, 208, 132, 0.08),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(0, 140, 255, 0.06),
+      transparent 35%
+    ),
+    #07111f;
+}
+
+
+/* =====================================================
+   OTP CARD
+===================================================== */
+
+.otp-card {
+  width: 100%;
+  max-width: 440px;
+
+  padding: 42px 38px;
+
+  box-sizing: border-box;
+
+  background: rgba(13, 27, 42, 0.96);
+
+  border: 1px solid #20384f;
+
+  border-radius: 20px;
+
+  text-align: center;
+
+  box-shadow:
+    0 25px 60px rgba(0, 0, 0, 0.55);
+
+  backdrop-filter: blur(10px);
+
+  animation: otpCardShow 0.45s ease;
+}
+
+
+/* =====================================================
+   CARD ANIMATION
+===================================================== */
+
+@keyframes otpCardShow {
+
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.otp-logo {
+  margin-bottom: 25px;
+
+  font-size: 34px;
+
+  font-weight: 800;
+
+  letter-spacing: -1px;
+
+  color: #ffffff;
+}
+
+.otp-logo span {
+  color: #00d084;
+}
+
+
+/* =====================================================
+   TITLE
+===================================================== */
+
+.otp-card h1 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 29px;
+
+  font-weight: 700;
+
+  letter-spacing: -0.5px;
+}
+
+
+/* =====================================================
+   SUBTITLE
+===================================================== */
+
+.otp-subtitle {
+  max-width: 350px;
+
+  margin: 13px auto 30px;
+
+  color: #91a4b7;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+
+/* =====================================================
+   OTP INPUT GROUP
+===================================================== */
+
+.otp-input-group {
+  width: 100%;
+
+  text-align: left;
+
+  margin-bottom: 20px;
+}
+
+
+/* =====================================================
+   LABEL
+===================================================== */
+
+.otp-input-group label {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: #d8e2ec;
+
+  font-size: 14px;
+
+  font-weight: 600;
+}
+
+
+/* =====================================================
+   OTP INPUT
+===================================================== */
+
+.otp-input-group input {
+  width: 100%;
+
+  height: 60px;
+
+  padding: 0 18px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #29435c;
+
+  border-radius: 11px;
+
+  outline: none;
+
+  background: #07111f;
+
+  color: #ffffff;
+
+  font-size: 23px;
+
+  font-weight: 700;
+
+  text-align: center;
+
+  letter-spacing: 9px;
+
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+
+/* Remove extra letter spacing from placeholder */
+
+.otp-input-group input::placeholder {
+  color: #53687b;
+
+  font-size: 14px;
+
+  font-weight: 400;
+
+  letter-spacing: 0;
+}
+
+
+/* =====================================================
+   INPUT FOCUS
+===================================================== */
+
+.otp-input-group input:focus {
+  border-color: #00d084;
+
+  background: #081522;
+
+  box-shadow:
+    0 0 0 3px rgba(0, 208, 132, 0.10),
+    0 0 18px rgba(0, 208, 132, 0.08);
+}
+
+
+/* =====================================================
+   MESSAGE
+===================================================== */
+
+.otp-message {
+  margin: 15px 0;
+
+  padding: 12px 14px;
+
+  border-radius: 9px;
+
+  background: rgba(0, 208, 132, 0.08);
+
+  border: 1px solid rgba(0, 208, 132, 0.25);
+
+  color: #00d084;
+
+  font-size: 13px;
+
+  line-height: 1.5;
+
+  word-break: break-word;
+}
+
+
+/* =====================================================
+   VERIFY OTP BUTTON
+===================================================== */
+
+.otp-verify-button {
+  width: 100%;
+
+  height: 52px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: #00d084;
+
+  color: #04130d;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    transform 0.2s ease,
+    box-shadow 0.25s ease;
+}
+
+
+/* =====================================================
+   VERIFY BUTTON HOVER
+===================================================== */
+
+.otp-verify-button:hover {
+  background: #00e895;
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 8px 25px rgba(0, 208, 132, 0.20);
+}
+
+
+/* =====================================================
+   VERIFY BUTTON ACTIVE
+===================================================== */
+
+.otp-verify-button:active {
+  transform: scale(0.98);
+}
+
+
+/* =====================================================
+   RESEND OTP
+===================================================== */
+
+.resend-otp-button {
+  margin-top: 20px;
+
+  padding: 9px 15px;
+
+  border: none;
+
+  background: transparent;
+
+  color: #00d084;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.25s ease;
+}
+
+.resend-otp-button:hover {
+  color: #00f0a0;
+
+  text-decoration: underline;
+}
+
+
+/* =====================================================
+   BACK TO LOGIN
+===================================================== */
+
+.back-login-button {
+  width: 100%;
+
+  height: 48px;
+
+  margin-top: 12px;
+
+  border: 1px solid #29435c;
+
+  border-radius: 10px;
+
+  background: transparent;
+
+  color: #b7c5d3;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    border-color 0.25s ease,
+    color 0.25s ease,
+    background 0.25s ease;
+}
+
+
+/* =====================================================
+   BACK BUTTON HOVER
+===================================================== */
+
+.back-login-button:hover {
+  border-color: #00d084;
+
+  color: #00d084;
+
+  background: rgba(0, 208, 132, 0.05);
+}
+
+
+/* =====================================================
+   DEMO TEXT
+===================================================== */
+
+.otp-demo {
+  margin-top: 25px;
+
+  color: #5f7386;
+
+  font-size: 12px;
+
+  letter-spacing: 0.2px;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+  .otp-page {
+    padding: 20px 15px;
+  }
+
+
+  .otp-card {
+    padding: 34px 23px;
+
+    border-radius: 17px;
+  }
+
+
+  .otp-logo {
+    font-size: 30px;
+
+    margin-bottom: 21px;
+  }
+
+
+  .otp-card h1 {
+    font-size: 25px;
+  }
+
+
+  .otp-subtitle {
+    font-size: 13px;
+
+    margin-bottom: 25px;
+  }
+
+
+  .otp-input-group input {
+    height: 56px;
+
+    font-size: 21px;
+
+    letter-spacing: 7px;
+  }
+
+
+  .otp-verify-button {
+    height: 50px;
+  }
+
+
+  .back-login-button {
+    height: 46px;
+  }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 360px) {
+
+  .otp-card {
+    padding: 30px 18px;
+  }
+
+
+  .otp-logo {
+    font-size: 27px;
+  }
+
+
+  .otp-card h1 {
+    font-size: 23px;
+  }
+
+
+  .otp-input-group input {
+    letter-spacing: 5px;
+
+    font-size: 19px;
+  }
+
+}
+
