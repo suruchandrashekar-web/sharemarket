@@ -8,7 +8,7 @@ import {
   useNavigate
 } from "react-router-dom";
 
-import "./WatchList.css";
+import "./Watchlist.css";
 
 
 const WatchList = () => {
