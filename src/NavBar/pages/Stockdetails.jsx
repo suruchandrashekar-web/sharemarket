@@ -12,7 +12,7 @@ import {
   ResponsiveContainer,
 } from "recharts";
 
-import "./StockDetails.css";
+import "./Stockdetails.css";
 
 // =====================================================
 // API CONFIGURATION
