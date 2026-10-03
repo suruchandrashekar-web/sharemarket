@@ -78,7 +78,8 @@ const Positions = () => {
   const fetchLiveStockPrices = useCallback(async () => {
     try {
       const response = await fetch(
-        "http://localhost:3000/stocks"
+                "https://sharemarket-da04.onrender.com/stocks"
+
       );
 
       if (!response.ok) {

@@ -19,7 +19,7 @@ function Stocks() {
 
   const fetchStocks = () => {
 
-    fetch("http://localhost:3000/stocks")
+    fetch( "https://sharemarket-da04.onrender.com/stocks")
 
       .then(response => {
 

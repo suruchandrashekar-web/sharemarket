@@ -18,8 +18,7 @@ import "./StockDetails.css";
 // API CONFIGURATION
 // =====================================================
 
-const API_URL = "http://localhost:3000/stocks";
-
+const API_URL =  "https://sharemarket-da04.onrender.com/stocks"
 const INITIAL_BALANCE = 100000;
 
 const PERIODS = ["1D", "1W", "1M", "6M", "1Y", "5Y"];

@@ -16,62 +16,57 @@ function Mutualfunds() {
 
   const fetchFunds = () => {
 
-    fetch("http://localhost:3000/mutualFunds")
+  fetch("https://sharemarket-da04.onrender.com/mutualFunds")
+    .then(response => {
 
-      .then(response => {
+      if (!response.ok) {
+        throw new Error("Failed to fetch mutual funds");
+      }
 
-        if (!response.ok) {
-          throw new Error("Failed to fetch mutual funds");
-        }
+      return response.json();
+    })
 
-        return response.json();
+    .then(data => {
 
-      })
+      const updatedFunds = data.map(fund => {
 
-      .then(data => {
+        const randomChange =
+          (Math.random() - 0.5) * 2;
 
-        const updatedFunds = data.map(fund => {
+        const newPrice =
+          Number(
+            (fund.price + randomChange).toFixed(2)
+          );
 
-          const randomChange =
-            (Math.random() - 0.5) * 2;
+        const percentage =
+          Number(
+            (
+              ((newPrice - fund.price) /
+                fund.price) *
+              100
+            ).toFixed(2)
+          );
 
-          const newPrice =
-            Number(
-              (fund.price + randomChange).toFixed(2)
-            );
-
-          const percentage =
-            Number(
-              (
-                ((newPrice - fund.price) /
-                  fund.price) *
-                100
-              ).toFixed(2)
-            );
-
-          return {
-            ...fund,
-            price: newPrice,
-            change: percentage
-          };
-
-        });
-
-        setFunds(updatedFunds);
-
-      })
-
-      .catch(error => {
-
-        console.error(
-          "Mutual Fund API Error:",
-          error
-        );
-
+        return {
+          ...fund,
+          price: newPrice,
+          change: percentage
+        };
       });
 
-  };
+      setFunds(updatedFunds);
+    })
 
+    .catch(error => {
+
+      console.error(
+        "Mutual Fund API Error:",
+        error
+      );
+
+    });
+
+};
 
   // ==============================
   // LIVE PRICE

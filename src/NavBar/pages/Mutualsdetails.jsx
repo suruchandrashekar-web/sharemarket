@@ -435,7 +435,7 @@ function MutualFundDetails() {
 
       const response =
         await fetch(
-          "http://localhost:3000/mutualFunds"
+         "https://sharemarket-da04.onrender.com/mutualFunds"
         );
 
       if (!response.ok) { 

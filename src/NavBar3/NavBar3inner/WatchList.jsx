@@ -56,7 +56,8 @@ const WatchList = () => {
 
       const stockResponse =
         await fetch(
-          "http://localhost:3000/stocks"
+                 "https://sharemarket-da04.onrender.com/stocks"
+
         );
 
 

@@ -21,7 +21,7 @@ const NavBar = () => {
 
   useEffect(() => {
 
-    fetch("http://localhost:3000/stocks")
+    fetch( "https://sharemarket-da04.onrender.com/stocks")
       .then(response => response.json())
       .then(data => {
         setStocks(data);
@@ -38,7 +38,8 @@ const NavBar = () => {
 
   useEffect(() => {
 
-    fetch("http://localhost:3000/mutualFunds")
+    fetch("https://sharemarket-da04.onrender.com/mutualFunds"
+)
       .then(response => response.json())
       .then(data => {
         setMutualFunds(data);
