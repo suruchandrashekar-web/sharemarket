@@ -2,7 +2,8 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-import "./OTP.css";
+import "./Otp.css";
+
 
 function OTP() {
   const navigate = useNavigate();

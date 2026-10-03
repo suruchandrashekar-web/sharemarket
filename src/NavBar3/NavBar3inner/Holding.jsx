@@ -2,7 +2,7 @@ import { useEffect, useState, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 
 import "./Holding.css";
-import { getAccount } from "../../NavBar/Pages/acc.js";
+import { getAccount } from "../../NavBar/pages/acc.js";
 
 function Holding() {
   const navigate = useNavigate();
